@@ -1,0 +1,60 @@
+<div class="header-content">
+    <!--Item left-->
+    <div class="header__item--left">
+        <img id="logo" src="assets/Images/ForAll/Header/Logo.png" alt="Logo" />
+        <div class="athene">ATHENE</div>
+    </div>
+    <!--Item middle - Navigation menu-->
+    <div class="header__item--middle" id="myNavigation">
+        <a class="nav-link" routerLink="/" routerLinkActive="active">Trang chủ</a>
+        <a class="nav-link" routerLink="/forstudent" routerLinkActive="active">Tìm gia sư</a>
+        <a class="nav-link" routerLink="/fortutor" routerLinkActive="active">Trở thành gia sư</a>
+        <a class="nav-link" routerLink="/blog" routerLinkActive="active">Blog</a>
+        <a class="nav-link" routerLink="/intropage" routerLinkActive="active">Giới thiệu</a>
+        <a class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <!--Item right-->
+    <div class="header__item--right">
+
+        <div>
+            <input class="signIn-button" type="button" value="Đăng nhập" id="btn-login" onclick="openPopup()">
+        </div>
+        <!-- The Modal -->
+        <div id="myLogin" class="login">
+            <span class="close-login">&times;</span>
+            <p class="popup-title log-in">ĐĂNG NHẬP</p>
+            <hr class="underline">
+            <div class="login-content">
+                <label class="form__label">Số điện thoại:</label> <br>
+                <input type="tel" name="sodt" id="sodt" class="form__input" required onblur="checkVal()" oninput="checkPhoneVal()">
+                <div id="phoneError">Số điện thoại không đúng định dạng!</div>
+                <div id="phoneError1">Hãy nhập số điện thoại!</div>
+                <label class="form__label">Mật khẩu:</label><br>
+                <input class="form__input" type="password" id="pass" autocomplete="current-password" name="password" minlength="8" oninput="checkPassVal()" required>
+                <div id="passError">Hãy nhập mật khẩu!</div>
+                <div class="forgotten"><a href="../Form_HTML/ConfirmOTP.html">Quên mật khẩu?</a></div>
+                <button type="submit" class="btnLogin" onclick="Login()">Đăng nhập</button>
+                <p class="linkSignUp"> Bạn chưa có tài khoản? <button class="register" type="button" id="btn-register" onclick="openPopup()">Đăng kí</button></p>
+            </div>
+        </div>
+        <!-- Sign up -->
+        <div>
+            <input class="signUp-button" type="button" value="Đăng ký" id="btn-signup" onclick="openPopup();">
+        </div>
+        <!-- The Modal -->
+        <div id="mySignup" class="signup">
+            <span class="close-signup">&times;</span>
+            <div>
+                <p class="popup-title">ĐĂNG KÝ</p>
+                <hr class="lineSignUp">
+                <h3>Chọn loại tài khoản phù hợp với nhu cầu của bạn</h3>
+                <div class="btnCategory">
+                    <a href="../Form_HTML/SignUpForLearner.html"><input type="button" value="Học viên"></a> <br>
+                    <a href="../Form_HTML/SignUpForTutor.html"> <input type="button" value="Gia sư "></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

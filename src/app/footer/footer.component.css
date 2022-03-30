@@ -1,0 +1,94 @@
+.footer-content {
+    width: 100%;
+    display: flex;
+    background: #0077C0;
+    color: white;
+}
+
+.footer__item--left {
+    margin-left: 6rem;
+    margin-right: 4rem;
+}
+
+.logo-display {
+    display: flex;
+    justify-content: center;
+}
+
+.ministry-logo {
+    width: 6rem;
+}
+
+.footer__item--middle {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+#about-us {
+    font-size: 1rem;
+}
+
+.footer__item--middle a {
+    text-decoration: none;
+    color: white;
+    margin-left: 3rem;
+    padding-bottom: 1rem;
+}
+
+.footer__item--middle a:hover {
+    text-decoration: underline;
+}
+
+.footer__item--right {
+    margin-top: 1rem;
+    margin-left: 6rem;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+#payment-logo {
+    width: 13rem;
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-logo {
+    margin: 0.5rem;
+}
+
+#download {
+    display: flex;
+}
+
+
+/* QR code - GG store - IOS store */
+
+.download-photo {
+    height: 4rem;
+    margin: 0 1rem;
+    padding-bottom: 1rem;
+}
+
+#footer-responsive {
+    display: none;
+    color: white;
+}
+
+.footer-icon {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .footer-content {
+        display: none;
+    }
+    #footer-responsive {
+        display: block;
+        background-color: #0077C0;
+        text-align: center;
+        font-size: 2rem;
+    }
+}
