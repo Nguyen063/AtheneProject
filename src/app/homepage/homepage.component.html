@@ -1,118 +1,72 @@
-<div id="fb-root">
+<!-- <div id="fb-root"></div>
 
-</div>
+<-- Your Plugin chat code -->
+<!--<div id="fb-customer-chat" class="fb-customerchat">
+    </div>
 
-<!-- Your Plugin chat code -->
-<div id="fb-customer-chat" class="fb-customerchat">
-</div>
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "101563828997234");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
-<script>
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "101563828997234");
-    chatbox.setAttribute("attribution", "biz_inbox");
-</script>
+    <-- Your SDK code -->
+<!--<script>
+window.fbAsyncInit = function() { FB.init({ xfbml: true, version: 'v12.0' }); }; (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+</script> -->
 
-<!-- Your SDK code -->
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            xfbml: true,
-            version: 'v12.0'
-        });
-    };
-
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<div>
-    <app-header></app-header>
-</div>
 
 <!-- Banner -->
-<div class="mySlides disappear">
-    <img class="banner-image" src="assets/Images/HomePage/Banner_Welcome.png">
-</div>
-<div class="mySlides disappear">
-    <img class="banner-image" src="assets/Images/HomePage/Banner_BlackFriday.png">
-</div>
-<div class="mySlides disappear">
-    <img class="banner-image" src="assets/Images/HomePage/Banner_MemberDay.jpg">
-</div>
 
-<br>
-<div style="text-align:center">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+<div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active mt-3">
+            <img src="assets/Images/HomePage/Banner_Welcome.png" class="d-block w-100" style="height: 25rem;" alt="Welcome">
+        </div>
+        <div class="carousel-item mt-3">
+            <img src="assets/Images/HomePage/Banner_BlackFriday.png" class="d-block w-100" alt="BlackFriday">
+        </div>
+        <div class="carousel-item mt-3">
+            <img src="assets/Images/HomePage/Banner_MemberDay.jpg" class="d-block w-100" alt="MemberDay">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
 </div>
-<!--
-*Flow của chạy Banner
-- Xuất hiện đầu tiên với 1 ảnh banner
-- Ảnh có 5s để hiển thị trên màn hình
-- Sau 5s sẽ lướt qua ảnh khác
-- Ảnh cũ sẽ bị ẩn đi
-- Vòng lặp chạy ảnh thực hiện không điểm dừng
--->
-<script>
-    var i;
-    var slideIndex = 0;
-    showSlides();
-    //Khai báo biến
-    function showSlides() {
-        var slides = document.getElementsByClassName("mySlides");
-        //Lấy dữ liệu của các phần tử trong mySlides ( có 3 )
-        var dots = document.getElementsByClassName("dot");
-        // Lấy dữ liệu của dot hiển thị bên dưới banner
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        // Chạy vòng lặp ẩn banner
-        slideIndex++;
-
-        if (slideIndex > slides.length) {
-            slideIndex = 1
-        }
-        //nếu số phần tử mySlides ít hơn slideIndex sẽ gán giá trị của slideIndex về ban đầu
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        // Chạy vòng lặp dot hiển thị dưới ảnh
-        // Nếu đến lượt dots[i] được hiển thị thì sẽ đổi màu dots[i] đó
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 5000);
-        // Thời gian tối đa là 5s
-    }
-</script>
 
 <!-- User flow content -->
-<div class="title">Tìm gia sư dễ hơn những gì bạn nghĩ</div>
-<div class="user-flow">
+<div class="text-center m-4 h2">Tìm gia sư dễ hơn những gì bạn nghĩ</div>
+<div class="user-flow text-center text-white">
     <div class="user__item-left inner-padding">
         <p class="number">1</p>
-        <h4 class="userflow-title">ĐĂNG KÝ, ĐĂNG NHẬP</h4>
+        <h4 class="h5">ĐĂNG KÝ, ĐĂNG NHẬP</h4>
         <p>Truy cập và sử dụng các chức năng của website Athene một cách toàn diện</p>
     </div>
     <div class="user__item-middle inner-padding">
         <p class="number">2</p>
-        <h4 class="userflow-title">BỘ LỌC TÌM KIẾM</h4>
+        <h4 class="h5">BỘ LỌC TÌM KIẾM</h4>
         <p>Sử dụng bộ lọc để tìm kiếm hồ sơ theo nhu cầu nhanh chóng hơn</p>
     </div>
     <div class="user__item-right inner-padding">
         <p class="number">3</p>
-        <h4 class="userflow-title">TẠO HỒ SƠ THEO NHU CẦU</h4>
+        <h4 class="h5">TẠO HỒ SƠ THEO NHU CẦU</h4>
         <p>Athene cung cấp cho người dùng bộ tiêu chí tạo hồ sơ theo nhu cầu</p>
     </div>
 </div>
 <!-- Our company content -->
-<div class="title">Văn hóa doanh nghiệp</div>
+<div class="text-center m-4 h2">Văn hóa doanh nghiệp</div>
 <div class="our-company">
     <div class="company__item--left">
         <div id="vision">
@@ -132,7 +86,7 @@
 </div>
 <!-- Our strength content -->
 <div class="our-strength">
-    <div class="title">Ưu điểm của chúng tôi</div>
+    <div class="text-center m-4 h2">Ưu điểm của chúng tôi</div>
     <div class="strength-content">
         <div class="strength__item--inside">
             <div class="strength-container">
@@ -184,15 +138,8 @@
             <span>Athene</span> là một website hỗ trợ tìm kiếm gia sư trực tuyến trên địa bàn thành phố Hồ Chí Minh.
             <br>Chúng tôi - <span>Athene</span> luôn đặt chất lượng cũng như uy tín lên hàng đầu, tất cả vì sự hài lòng của bạn!
         </p>
-        <p id="button-position"><button>Xem thêm</button>
+        <p id="button-position"><button routerLink="/intropage" routerLinkActive="active">Xem thêm</button>
+
         </p>
     </div>
 </div>
-<!-- Footer -->
-<div>
-    <app-footer></app-footer>
-</div>
-
-
-
-<router-outlet></router-outlet>

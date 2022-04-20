@@ -1,36 +1,12 @@
-/* Banner */
-
-.mySlides {
-    display: none;
-}
-
-.banner-image {
-    height: 25rem;
-    margin-top: 3rem;
-    width: 100%;
-}
-
-
-/* The dots/bullets/indicators */
-
-.dot {
-    height: 1rem;
-    width: 1rem;
-    margin: 0 0.1rem;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active {
+/* .active {
     background-color: #717171;
 }
 
 
 /* Fading animation */
 
-.disappear {
+
+/* .disappear {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 0;
     animation-name: fade;
@@ -53,26 +29,26 @@
     to {
         opacity: 1
     }
-}
+} */
 
 
 /* User flow CSS */
 
-.title {
+
+/* .title {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
     margin: 1rem;
-}
+} */
 
-.userflow-title {
+
+/* .userflow-title {
     font-size: 1.3rem;
-}
+} */
 
 .user-flow {
     display: flex;
-    text-align: center;
-    color: white;
 }
 
 .user__item-left {
