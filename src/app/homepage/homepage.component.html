@@ -1,50 +1,35 @@
-<div id="fb-root">
+<!-- <div id="fb-root"></div>
 
-</div>
+<-- Your Plugin chat code -->
+<!--<div id="fb-customer-chat" class="fb-customerchat">
+    </div>
 
-<!-- Your Plugin chat code -->
-<div id="fb-customer-chat" class="fb-customerchat">
-</div>
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "101563828997234");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
-<script>
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "101563828997234");
-    chatbox.setAttribute("attribution", "biz_inbox");
-</script>
-
-<!-- Your SDK code -->
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            xfbml: true,
-            version: 'v12.0'
-        });
-    };
-
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
+    <-- Your SDK code -->
+<!--<script>
+window.fbAsyncInit = function() { FB.init({ xfbml: true, version: 'v12.0' }); }; (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+</script> -->
 
 <div>
     <app-header></app-header>
 </div>
 
 <!-- Banner -->
-<div class="mySlides disappear">
+<div class="mySlides ">
     <img class="banner-image" src="assets/Images/HomePage/Banner_Welcome.png">
 </div>
-<div class="mySlides disappear">
+<!-- <div class="mySlides disappear">
     <img class="banner-image" src="assets/Images/HomePage/Banner_BlackFriday.png">
 </div>
 <div class="mySlides disappear">
     <img class="banner-image" src="assets/Images/HomePage/Banner_MemberDay.jpg">
-</div>
+</div> -->
 
 <br>
 <div style="text-align:center">
@@ -60,7 +45,7 @@
 - Ảnh cũ sẽ bị ẩn đi
 - Vòng lặp chạy ảnh thực hiện không điểm dừng
 -->
-<script>
+<!-- <script>
     var i;
     var slideIndex = 0;
     showSlides();
@@ -90,7 +75,7 @@
         setTimeout(showSlides, 5000);
         // Thời gian tối đa là 5s
     }
-</script>
+</script> -->
 
 <!-- User flow content -->
 <div class="title">Tìm gia sư dễ hơn những gì bạn nghĩ</div>
@@ -184,7 +169,8 @@
             <span>Athene</span> là một website hỗ trợ tìm kiếm gia sư trực tuyến trên địa bàn thành phố Hồ Chí Minh.
             <br>Chúng tôi - <span>Athene</span> luôn đặt chất lượng cũng như uy tín lên hàng đầu, tất cả vì sự hài lòng của bạn!
         </p>
-        <p id="button-position"><button>Xem thêm</button>
+        <p id="button-position"><button routerLink="/intropage" routerLinkActive="active">Xem thêm</button>
+
         </p>
     </div>
 </div>
