@@ -11,19 +11,8 @@ import { BlogComponent } from './blog/blog.component';
 import { IntropageComponent } from './intropage/intropage.component';
 import { TutorProfileComponent } from './tutor_profile/tutor-profile.component';
 import { HttpClientModule } from '@angular/common/http';
-import { Routes, RouterModule } from '@angular/router'; //import Routes từ module @angular/router
 import { FormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
-
-
-//Khai báo một constant chứa các route của app
-const routes: Routes = [
-  { path: '',redirectTo:'homepage',pathMatch:'full' },
-  { path: 'blog', component: BlogComponent },
-  { path: 'forstudent', component: ForstudentComponent },
-  { path: 'fortutor', component: FortutorComponent },
-  { path: 'intropage', component: IntropageComponent }
-];
 
 
 
@@ -42,7 +31,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule, FormsModule, RouterModule.forRoot(routes)
+    AppRoutingModule, HttpClientModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
