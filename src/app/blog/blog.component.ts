@@ -14,52 +14,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class BlogComponent implements OnInit {
 
   selectedId: any;
-  selectedName: any;
-  selectedContent: any;
-  selectedAuthor: any;
-  selectedTitle1: any;
-  selectedContent1: any;
-  selectedTitle2: any;
-  selectedContent2: any;
-  selectedTitle3: any;
-  selectedContent3: any;
+
   blogs: any;
   errMessage: string="";
   blog: Blog=new Blog();
-    constructor(private _service: ExampleService, private _toast: ToastrService, private _router: Router,private _activatedRouter: ActivatedRoute) { }
+    constructor(private _service: ExampleService, private _toast: ToastrService, private _router: Router) { }
   
     ngOnInit(): void {
-     this.getProducts();
+     this.getBlogs();
 
-     this._activatedRouter.paramMap.subscribe(
-      (param)=>{
-        let id=param.get('id')
-        let name=param.get('name')
-        let content=param.get('content')
-        let author=param.get('author')
-        let title1=param.get('id')
-        let content1=param.get('content1')
-        let title2=param.get('id')
-        let content2=param.get('content1')
-        let title3=param.get('id')
-        let content3=param.get('content1')
-        if(id!=null){
-          this.selectedId=parseInt(id);
-          this.selectedName=name;
-          this.selectedContent=content;
-          this.selectedAuthor=author;
-          this.selectedTitle1=title1;
-          this.selectedContent1=content1;
-           this.selectedTitle2=title2;
-          this.selectedContent2=content2;
-          this.selectedTitle3=title3;
-          this.selectedContent3=content3;
-        }
-      }
-    )
     }
-  getProducts(){
-    this._service.getProducts().subscribe({
+  getBlogs(){
+    this._service.getBlogs().subscribe({
       next: data => this.blogs=data,
       error: err=> this.errMessage=err
     })
@@ -82,7 +48,7 @@ export class BlogComponent implements OnInit {
         if(resData.message ==="Success"){
           this._toast.success("Insert successfully!","Insert")
           // alert("Success!")
-          this.getProducts();
+          this.getBlogs();
         } else{
           alert("Fail!")
         }
@@ -96,7 +62,7 @@ export class BlogComponent implements OnInit {
           // alert("Updated Success!");
           this._toast.info("Update successfully!","Update")
           this.onReset();
-          this.getProducts();
+          this.getBlogs();
         } else{
           alert("Fail!")
         }
@@ -119,7 +85,7 @@ export class BlogComponent implements OnInit {
     progressBar:false
   });
   this.onReset(form);
-          this.getProducts();
+          this.getBlogs();
         } else{
           alert("Fail!")
         }

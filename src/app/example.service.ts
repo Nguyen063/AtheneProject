@@ -16,7 +16,7 @@ export class ExampleService {
 
   constructor(private _http: HttpClient) { }
 
-  getProducts(): Observable<IBlog[]>{
+  getBlogs(): Observable<IBlog[]>{
     return this._http.get<IBlog[]>(`${baseUrl}/blog`).pipe(
       retry(3),
       catchError(this.handleError)
