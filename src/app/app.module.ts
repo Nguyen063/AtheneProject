@@ -13,6 +13,9 @@ import { TutorProfileComponent } from './tutor_profile/tutor-profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ToastrModule } from 'ngx-toastr';
+import { ContentBlogComponent } from './content-blog/content-blog.component';
+
 
 
 
@@ -27,11 +30,17 @@ import { HomepageComponent } from './homepage/homepage.component';
     BlogComponent,
     IntropageComponent,
     TutorProfileComponent,
-    HomepageComponent
+    HomepageComponent,
+    ContentBlogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule, FormsModule
+    AppRoutingModule, HttpClientModule, FormsModule, ToastrModule.forRoot({
+      timeOut:3000, 
+      progressBar: true,
+      progressAnimation:"increasing",
+      preventDuplicates: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

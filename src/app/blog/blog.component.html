@@ -4,7 +4,7 @@
 
 <img id="image-header" src="assets/Images/Blog/banner_blog.jpg" alt="Lỗi">
 <div class="blog-body">
-    <!-- Left Menu -->
+    <!-- -- Left Menu -->
     <div class="blog-left">
         <h4 class="left-title">Bài viết mới nhất</h4>
         <ul>
@@ -20,12 +20,63 @@
         </ul>
     </div>
     <!-- Right Content -->
-    <div class="blog-right">
-        <iframe allowfullscreen src="assets/Data/Blog-main.html" frameborder="0" name="hienthi" style="height: 800px; width: 100%;"></iframe>
+    <div class="blog-right" style="margin-top: 1.5rem;">
+        <b style="font-weight: bold; margin-left:2rem">Tin tức</b>
+        <!-- <iframe allowfullscreen src="assets/Data/Blog-main.html" frameborder="0" name="hienthi" style="height: 800px; width: 100%;"></iframe> -->
+        <div class="row mb-3 mt-3 p-3 item " *ngFor="let p of blogs, let i =index" style=" background-color: #cccccc; margin-left: 1.5rem" class="{{isSelect(p) ? 'selected' : ''}}" (click)="onSelect(p)">
+            <div class=" col-sm-3 ">
+                <img class="img-responsive " src="{{p.image}} ">
+            </div>
+            <div class="col-sm-9 ml-1">
+                <h4 style="margin-bottom:0 ">{{p.name}}</h4>
+                <p id="author " style="margin-top:0 ">{{p.author}}</p>
+                <div class="content-item ">
+                    <p>{{p.content}}</p>
+                    <h5>{{p.title1}}</h5>
+                    <p>{{p.content1}}</p>
+                    <h5>{{p.title2}}</h5>
+                    <p>{{p.content2}}</p>
+                    <h5>{{p.title3}}</h5>
+                    <p>{{p.content3}}</p>
+                </div>
+            </div>
+        </div>
     </div>
+
     <!-- Mat thanh cuon laf scrolling=no -->
-</div>
-<!-- Footer -->
-<!-- <div>
+    <!-- </div> -->
+    <!-- Footer -->
+    <!-- <div>
     <app-footer></app-footer>
 </div> -->
+
+
+    <!-- <table class="table table-striped ">
+        <thead>
+            <th>#</th>
+            <th>Name</th>
+            <th>Content</th>
+            <th>Title</th>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of blogs, let i=index ">
+                <td>{{i+1}}</td>
+                <td>
+                    <h2>{{p.name}}</h2>
+                </td>
+                <td>{{p.content1}}</td>
+                <td>{{p.title1}}</td>
+                <td>{{p.content2}}</td>
+                <td>{{p.title2}}</td>
+                <td>{{p.content3}}</td>
+                <td>{{p.title3}}</td>
+                <td>{{p.content4}}</td>
+                 <td>
+                    <i class="bi bi-pencil " (click)="edit(p) ">Edit</i>
+                    <i class="bi bi-trash ms-5 " (click)="delete(p._id, productForm) ">Del</i>
+                </td>
+    </tr>
+
+    </tbody>
+    </table> -->

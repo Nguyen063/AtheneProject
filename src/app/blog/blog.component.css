@@ -64,6 +64,24 @@ a {
     font-size: 1rem;
 }
 
+.content-item {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: wrap;
+    height: 70px;
+}
+
+
+/* .content-item:hover {
+    text-overflow: clip;
+    overflow: visible;
+    white-space: pre-line;
+} */
+
+.item {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {
     .blog-left {
         display: none;
