@@ -89,3 +89,9 @@
         font-weight: bold;
     }
 }
+@media screen and (max-width: 480px){
+    .intro-page{
+        font-size: 2.5rem;
+        line-height: 5.0rem;
+    }
+    }
