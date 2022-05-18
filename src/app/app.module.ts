@@ -10,7 +10,7 @@ import { ForstudentComponent } from './forstudent/forstudent.component';
 import { FortutorComponent } from './fortutor/fortutor.component';
 import { BlogComponent } from './blog/blog.component';
 import { IntropageComponent } from './intropage/intropage.component';
-import { TutorProfileComponent } from './tutor_profile/tutor-profile.component';
+import { TutorProfileComponent } from './tutor-profile/tutor-profile.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { HomepageComponent } from './homepage/homepage.component';
