@@ -40,7 +40,7 @@ import { ContentBlogComponent } from './content-blog/content-blog.component';
     HttpClientModule, 
     FormsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       progressBar: true,
