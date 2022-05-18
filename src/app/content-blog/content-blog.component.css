@@ -82,6 +82,36 @@ a {
     cursor: pointer;
 }
 
+.kichthuoc {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 40%;
+}
+
+* {
+    font-family: 'Roboto';
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+
+#author {
+    color: #8D7676;
+}
+
+.blog-right h4 {
+    color: orangered;
+}
+
+.blog-left a {
+    font-size: 1.2rem;
+    font-family: 'Roboto';
+}
+
 @media only screen and (max-width: 768px) {
     .blog-left {
         display: none;

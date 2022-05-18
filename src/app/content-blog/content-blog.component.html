@@ -4,31 +4,34 @@
     <div class="blog-left">
         <h4 class="left-title">Bài viết mới nhất</h4>
         <ul>
-            <li><a routerLink="/blog/02" routerLinkActive="active">Lợi ích của việc trở thành gia sư</a></li>
+            <li><a routerLink="/blog/blog_01" routerLinkActive="active">Lợi ích của việc trở thành gia sư</a></li>
             <br>
-            <li><a routerLink="/blog/04" routerLinkActive="active">Một số phương pháp học tập hiểu quả</a></li>
+            <li><a routerLink="/blog/blog_02" routerLinkActive="active">Một số phương pháp học tập hiệu quả</a></li>
             <br>
-            <li><a routerLink="/blog/01" routerLinkActive="active">Phương pháp học tốt Toán - Lý - Hóa</a></li>
+            <li><a routerLink="/blog/blog_03" routerLinkActive="active">Phương pháp học tốt Toán - Lý - Hóa</a></li>
             <br>
-            <li><a routerLink="/blog/03" routerLinkActive="active">Tìm gia sư có thật sự cần thiết không</a></li>
+            <li><a routerLink="/blog/blog_04" routerLinkActive="active">Tìm gia sư có thật sự cần thiết không</a></li>
             <br>
-            <li><a routerLink="/blog/05" routerLinkActive="active">Nên giảng dạy thế nào cho học sinh lười học</a></li>
+            <li><a routerLink="/blog/blog_05" routerLinkActive="active">Nên giảng dạy thế nào cho học sinh lười học</a></li>
         </ul>
     </div>
     <!-- Right Content -->
     <div class="blog-right" style="margin-top: 1.5rem; margin-left: 2rem;">
         <div *ngFor="let b of blogs">
             <div [class.d-none]="b.id==selectedId?false:true">
-                <h2>{{b.name}}</h2>
-                <span>{{b.author}}</span>
+                <h2 class="text-center mb-1">{{b.name}}</h2>
+                <span id="author" class="mt-0 fw-bold">Tác giả: {{b.author}}</span> <br>
                 <p>{{b.content}}</p>
                 <h4>{{b.title1}}</h4>
+                <img class="kichthuoc" src="http://localhost:3000/{{b.thumbPath}}">
                 <p>{{b.content1}}</p>
                 <h4>{{b.title2}}</h4>
+                <img class="kichthuoc" src="http://localhost:3000/{{b.thumbPath1}}">
                 <p>{{b.content2}}</p>
                 <h4>{{b.title3}}</h4>
+                <img class="kichthuoc" src="http://localhost:3000/{{b.thumbPath2}}">
                 <p>{{b.content3}}</p>
             </div>
         </div>
-        <button class="btn btn-secondary" style="float:right;" (click)="goBack()">Quay lại</button>
+        <button class="btn btn-secondary mb-2" style="float:right;" (click)="goBack()">Quay lại</button>
     </div>

@@ -2,39 +2,43 @@
     <app-header></app-header>
 </div> -->
 
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto'>
+</head>
+
 <img id="image-header" src="assets/Images/Blog/banner_blog.jpg" alt="Lỗi">
+
 <div class="blog-body">
     <!-- -- Left Menu -->
     <div class="blog-left">
         <h4 class="left-title">Bài viết mới nhất</h4>
         <ul>
-            <li><a routerLink="/blog/02" routerLinkActive="active">Lợi ích của việc trở thành gia sư</a></li>
+            <li><a routerLink="/blog/blog_01" routerLinkActive="active">Lợi ích của việc trở thành gia sư</a></li>
             <br>
-            <li><a routerLink="/blog/04" routerLinkActive="active">Một số phương pháp học tập hiểu quả</a></li>
+            <li><a routerLink="/blog/blog_02" routerLinkActive="active">Một số phương pháp học tập hiệu quả</a></li>
             <br>
-            <li><a routerLink="/blog/01" routerLinkActive="active">Phương pháp học tốt Toán - Lý - Hóa</a></li>
+            <li><a routerLink="/blog/blog_03" routerLinkActive="active">Phương pháp học tốt Toán - Lý - Hóa</a></li>
             <br>
-            <li><a routerLink="/blog/03" routerLinkActive="active">Tìm gia sư có thật sự cần thiết không</a></li>
+            <li><a routerLink="/blog/blog_04" routerLinkActive="active">Tìm gia sư có thật sự cần thiết không</a></li>
             <br>
-            <li><a routerLink="/blog/05" routerLinkActive="active">Nên giảng dạy thế nào cho học sinh lười học</a></li>
+            <li><a routerLink="/blog/blog_05" routerLinkActive="active">Nên giảng dạy thế nào cho học sinh lười học</a></li>
         </ul>
     </div>
     <!-- Right Content -->
-    <div class="blog-right" style="margin-top: 1.5rem;">
-        <b style="font-weight: bold; margin-left:2rem">Tin tức</b>
-        <!-- <iframe allowfullscreen src="assets/Data/Blog-main.html" frameborder="0" name="hienthi" style="height: 800px; width: 100%;"></iframe> -->
-        <div class="row mb-3 mt-3 p-3 item " *ngFor="let p of blogs, let i =index" style=" background-color: #cccccc; margin-left: 1.5rem" class="{{isSelect(p) ? 'selected' : ''}}" (click)="onSelect(p)">
-            <div class=" col-sm-3 ">
-                <img class="img-responsive " src="{{p.image}} ">
+    <div class="blog-right">
+        <b style="font-weight: bold; margin-left:3rem; font-size: 1.4rem;">Tin tức</b>
+        <div class="row mb-3 mt-3 item" *ngFor="let p of blogs, let i =index" class="{{isSelect(p) ? 'selected' : ''}}" (click)="onSelect(p)">
+            <div class="col-sm-4 ">
+                <img class="img-responsive" src="http://localhost:3000/{{p.thumbPath}}">
             </div>
-            <div class="col-sm-9 ml-1">
-                <h4 style="margin-bottom:0 ">{{p.name}}</h4>
-                <p id="author " style="margin-top:0 ">{{p.author}}</p>
+            <div class="col-sm-8 ml-1 p-3">
+                <h5 class="fw-bold">{{p.name}}</h5>
+                <p id="author">{{p.author}}</p>
                 <div class="content-item ">
                     <p>{{p.content}}</p>
-                    <h5>{{p.title1}}</h5>
+                    <h6>{{p.title1}}</h6>
                     <p>{{p.content1}}</p>
-                    <h5>{{p.title2}}</h5>
+                    <h6>{{p.title2}}</h6>
                     <p>{{p.content2}}</p>
                     <h5>{{p.title3}}</h5>
                     <p>{{p.content3}}</p>

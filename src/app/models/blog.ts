@@ -3,6 +3,9 @@ export class Blog{
     name: string;
     author: string;
     content: string;
+  thumbPath:string;
+  thumbPath1:string;
+  thumbPath2:string;
     title1: string;
     content1: string;
     title2: string;
@@ -14,6 +17,9 @@ export class Blog{
         this.name="";
         this.author="";
         this.content="";
+      this.thumbPath="",
+      this.thumbPath1="",
+      this.thumbPath2="",
         this.title1="";
         this.content1="";
         this.title2="";
@@ -21,7 +27,5 @@ export class Blog{
         this.title3="";
         this.content3="";
 
-        
-     
     }
 }
