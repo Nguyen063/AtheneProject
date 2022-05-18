@@ -1,10 +1,3 @@
-/* body,
-html {
-    font-family: 'Roboto';
-    margin: 0px;
-    padding: 0px;
-} */
-
 * {
     font-family: 'Roboto';
 }
@@ -30,7 +23,7 @@ html {
 
 .blog-left {
     margin-top: 4em;
-    width: 20%;
+    width: 25%;
     background-color: #FAF1D6;
     height: fit-content;
     margin-left: 1em;
@@ -43,7 +36,6 @@ html {
 
 .blog-left a {
     font-size: 1.2rem;
-    font-family: 'Roboto';
 }
 
 a:visited {
