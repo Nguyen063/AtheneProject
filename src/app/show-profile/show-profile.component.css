@@ -103,7 +103,6 @@
 .user-container {
     display: flex;
     margin: 0 7.5%;
-    font-family: 'Roboto', sans-serif;
 }
 
 .user__item--intro {
@@ -192,6 +191,54 @@
     padding: 0 15%;
 }
 
+
+.user-click {
+    position: relative;
+    left: 54%;
+    top: -8vw;
+    margin-bottom: 0;
+    width: fit-content;
+}
+
+.btn-follow,
+.btn-register {
+    width: 12rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    margin-right: 5rem;
+    padding-bottom: 0;
+}
+
+.line {
+    width: 75%;
+    background: #867878;
+    height: 0.5px;
+    margin-top: -2rem;
+    margin-bottom: 2.5rem;
+}
+
+.edit-content #gender {
+    margin-left: 2.2rem;
+}
+
+.edit-content #dob,
+#oldschool {
+    margin-left: 1.5rem;
+}
+
+.edit-content #school {
+    margin-left: 1.5rem;
+}
+
+.edit-content #major {
+    margin-left: 2.2rem;
+}
+
+.edit-content #school,
+#major {
+    width: 50%;
+}
+
 @media screen and (max-width: 400px) {
     .athene {
         line-height: 3rem;
@@ -199,6 +246,48 @@
 }
 
 
+
+.confirmation-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 40%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.confirm-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.confirm-btn {
+    width: 6rem;
+    height: 2rem;
+    background-color: #0077C0;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 2rem;
+    margin: -1rem 0;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 600px) {
     .user-container {
