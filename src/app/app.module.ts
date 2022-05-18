@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ContentBlogComponent } from './content-blog/content-blog.component';
+import { ShowProfileComponent } from './show-profile/show-profile.component';
 
 
 
@@ -32,7 +33,8 @@ import { ContentBlogComponent } from './content-blog/content-blog.component';
     IntropageComponent,
     TutorProfileComponent,
     HomepageComponent,
-    ContentBlogComponent
+    ContentBlogComponent,
+    ShowProfileComponent
   ],
   imports: [
     BrowserModule,
