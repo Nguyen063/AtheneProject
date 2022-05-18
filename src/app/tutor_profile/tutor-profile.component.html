@@ -6,6 +6,8 @@
 <!-- Body  -->
 
 
+
+
 <div class="profile-container" *ngFor="let p of profiles">
     <img class="cover-image" src="https://timelinecovers.pro/facebook-cover/download/anime-one-piece-luffy-and-ace-facebook-cover.jpg">
     <div class="user-info">
@@ -59,7 +61,7 @@
                     <div class="subtitle">Đã học tại: </div>
                     <div class="ms-2"> {{p.wentTo}}</div>
                 </div>
-      
+            </div>
         </div>
         
         <!-- Experience -->
@@ -94,7 +96,7 @@
     <!-- Right item -->
     <div class="user__item--content">
         <!-- Register class -->
-        <div class="content__item--class" ng-repeat="x in profiles">
+        <div class="content__item--class" >
             <div class="sub-title">
                 Lớp đang đăng kí
             </div>
@@ -132,9 +134,10 @@
             </div>
             <button class="btn-editcontent">Chỉnh sửa</button>
         </div>
-    </div>
+    
     
  
+
 
 
 <!-- Footer -->
