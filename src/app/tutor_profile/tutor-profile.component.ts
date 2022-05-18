@@ -1,4 +1,6 @@
+import { ProfileService } from './../services/profile.service';
 import { Component, OnInit } from '@angular/core';
+import { Profile } from '../models/profile';
 
 @Component({
   selector: 'app-tutor-profile',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tutor-profile.component.css']
 })
 export class TutorProfileComponent implements OnInit {
+  profile: Profile= new Profile();
+  profiles:any;
+  errMessage: string="" ;
 
-  constructor() { }
+  constructor(private _service:ProfileService) { }
 
   ngOnInit(): void {
+    this.getProfiles()
   }
-
+  getProfiles(){
+    this._service.getProfiles().subscribe({
+      next:data => this.profiles=data,
+      error : err=> this.errMessage=err
+    })
+   }
 }
