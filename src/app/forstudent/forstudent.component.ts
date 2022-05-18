@@ -1,4 +1,6 @@
+import { ForStudentService } from './../services/for-student.service';
 import { Component, OnInit } from '@angular/core';
+import { LearnerProfile } from '../models/for-student';
 
 @Component({
   selector: 'app-forstudent',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForstudentComponent implements OnInit {
 
-  constructor() { }
+  learner: LearnerProfile= new LearnerProfile();
+  learners:any;
+  errMessage: string="" ;
+  
+  constructor(private _service: ForStudentService) { }
 
   ngOnInit(): void {
+    this.getLearner()
   }
-
+  getLearner(){
+    this._service.getLearner().subscribe({
+      next:data => this.learners=data,
+      error : err=> this.errMessage=err
+    })
+   }
 }

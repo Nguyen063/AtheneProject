@@ -1,33 +1,14 @@
-<!-- Header -->
-<!-- <div>
-    <app-header></app-header>
-</div> -->
-
-<!-- Body  -->
-
-
-
-
 <div class="profile-container" *ngFor="let p of profiles">
     <img class="cover-image" src="https://timelinecovers.pro/facebook-cover/download/anime-one-piece-luffy-and-ace-facebook-cover.jpg">
     <div class="user-info">
         <img class="user-avatar" src="https://genk.mediacdn.vn/2018/8/23/anh-0-1535019031645146400508.jpg" id="user-avatar">
         <div>
-            <label class="btn-avatar">
-                <input type="file" name="avatar-image" accept="image/*" onchange="loadAvatar(event)">
-                <button><i class='bi bi-camera-fill'></i> </button>
-            </label>
             <div class="user-name">
                 <h1>{{p.name}}</h1>
                 <p>{{p.followers}}</p>
             </div>
-        </div>
-        <label class="btn-cover">
-            <input type="file" name="cover-image" accept="image/*" onchange="loadCover(event)">
-            <button> <i class='bi bi-camera-fill'></i> Chỉnh sửa ảnh bìa</button>
-        </label>
+        </div>  
     </div>
-
     <hr class="line" />
     <!-- User content -->
     <div class="user-container">
@@ -60,8 +41,8 @@
                 <div class="info-line">
                     <div class="subtitle">Đã học tại: </div>
                     <div class="ms-2"> {{p.wentTo}}</div>
-                </div>
-            </div>
+                </div>    
+            </div>       
         </div>
         
         <!-- Experience -->
@@ -77,7 +58,6 @@
                 Exp2
             </div>
             <!-- Achievement -->
-
             <div class="sub-title">
                 Thành tích đạt được
             </div>
@@ -90,13 +70,13 @@
             <div class="info-line">
                 Achievements3
             </div>
-            <button class="btn-editcontent">Chỉnh sửa</button>
+   
         </div>
     </div>
     <!-- Right item -->
     <div class="user__item--content">
         <!-- Register class -->
-        <div class="content__item--class" >
+        <div class="content__item--class" ng-repeat="x in profiles">
             <div class="sub-title">
                 Lớp đang đăng kí
             </div>
@@ -132,15 +112,8 @@
                 <div class="subtitle"> Mô tả thêm: </div>
                 <div class="ms-2"> {{p.more}}</div>
             </div>
-            <button class="btn-editcontent">Chỉnh sửa</button>
+           
         </div>
+    </div>
     
-    
- 
-
-
-
-<!-- Footer -->
-<!-- <div>
-    <app-footer></app-footer>
-</div> -->
+    </div>

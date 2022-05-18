@@ -6,6 +6,7 @@ import { ForstudentComponent } from './forstudent/forstudent.component';
 import { FortutorComponent } from './fortutor/fortutor.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { IntropageComponent } from './intropage/intropage.component';
+import { TutorProfileComponent } from './tutor-profile/tutor-profile.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'blog/:id', component: ContentBlogComponent},
   { path: 'forstudent', component: ForstudentComponent },
   { path: 'fortutor', component: FortutorComponent },
-  { path: 'intropage', component: IntropageComponent }
+  { path: 'intropage', component: IntropageComponent },
+  { path: 'tutorprofile', component: TutorProfileComponent }
 ];
 
 @NgModule({
