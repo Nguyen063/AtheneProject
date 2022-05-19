@@ -17,6 +17,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ContentBlogComponent } from './content-blog/content-blog.component';
 import { ShowProfileComponent } from './show-profile/show-profile.component';
+import { ForlearnerComponent } from './forlearner/forlearner.component';
 
 
 
@@ -34,7 +35,8 @@ import { ShowProfileComponent } from './show-profile/show-profile.component';
     TutorProfileComponent,
     HomepageComponent,
     ContentBlogComponent,
-    ShowProfileComponent
+    ShowProfileComponent,
+    ForlearnerComponent
   ],
   imports: [
     BrowserModule,

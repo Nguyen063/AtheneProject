@@ -5,6 +5,7 @@ import { IBlog } from './interfaces/blogs';
 import { Blog } from './models/blog';
 import { IHomepage } from './interfaces/homepages';
 import { Homepage } from './models/homepage';
+import { Intro } from './models/info';
 
 
 const baseUrl="http://localhost:3000"
@@ -31,12 +32,22 @@ export class ExampleService {
     )
   }
 
+  getIntros():Observable<Intro[]>{
+    return this._http.get<Intro[]>(`${baseUrl}/intropage`).pipe(
+      retry(3),
+      catchError(this.handleError)
+    )
+  }
+
   postBlog(data: Blog){
 return this._http.post(`${baseUrl}/blog`,data)
   }
   postHomepage(data: Homepage){
     return this._http.post(`${baseUrl}/homepage`,data)
       }
+  postIntro(data:Intro){
+    return this._http.post(`${baseUrl}/intropage`,data)
+  }
 
   updateProduct(id:any, data:any){
     return this._http.patch(`${baseUrl}/${id}`,data)
