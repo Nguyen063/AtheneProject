@@ -18,7 +18,10 @@ export class IntropageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getIntros();
-    
+    this._activatedRouter.paramMap.subscribe((param)=>{
+      let id=param.get('id');
+    }
+    )
   }
   getIntros(){
     this._service.getIntros().subscribe({

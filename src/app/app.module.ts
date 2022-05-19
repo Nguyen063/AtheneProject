@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ForstudentComponent } from './forstudent/forstudent.component';
 import { FortutorComponent } from './fortutor/fortutor.component';
 import { BlogComponent } from './blog/blog.component';
 import { IntropageComponent } from './intropage/intropage.component';
@@ -17,6 +16,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ContentBlogComponent } from './content-blog/content-blog.component';
 import { ShowProfileComponent } from './show-profile/show-profile.component';
+import { ForlearnerComponent } from './forlearner/forlearner.component';
 
 
 
@@ -27,14 +27,14 @@ import { ShowProfileComponent } from './show-profile/show-profile.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ForstudentComponent,
     FortutorComponent,
     BlogComponent,
     IntropageComponent,
     TutorProfileComponent,
     HomepageComponent,
     ContentBlogComponent,
-    ShowProfileComponent
+    ShowProfileComponent,
+    ForlearnerComponent
   ],
   imports: [
     BrowserModule,
