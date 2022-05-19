@@ -1,13 +1,16 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, retry, throwError } from 'rxjs';
-import { LearnerProfile } from '../models/for-student';
+import { LearnerProfile } from '../models/for-learner';
+
 
 const baseUrl="http://localhost:3000"
+
 @Injectable({
   providedIn: 'root'
 })
-export class ForStudentService {
+export class ForlearnerService {
+
   constructor(private _http: HttpClient) { }
   getLearner(): Observable<LearnerProfile[]>{
     return this._http.get<LearnerProfile[]>(`${baseUrl}/learner`).pipe(

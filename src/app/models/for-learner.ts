@@ -9,11 +9,12 @@ export class LearnerProfile{
     Request: String="";
     Grade: String="";
     School: String="";  
-   
+  
      constructor(){
          this._id="";
          this.Name="";
         // this.exp1="";
+
 
      }
 }
