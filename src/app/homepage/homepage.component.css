@@ -34,13 +34,15 @@
 
 /* User flow CSS */
 
-
-/* .title {
-    text-align: center;
+.title {
     font-size: 2rem;
     font-weight: bold;
     margin: 1rem;
-} */
+}
+
+* {
+    font-family: 'Roboto';
+}
 
 
 /* .userflow-title {
@@ -53,7 +55,7 @@
 
 .user__item-left {
     background-color: #3EB8D7;
-    /* flex: 1; */
+    flex: 1;
 }
 
 .user__item-middle {
