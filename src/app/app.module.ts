@@ -41,7 +41,6 @@ import { ShowProfileComponent } from './show-profile/show-profile.component';
     AppRoutingModule,
     HttpClientModule, 
     FormsModule,
-    FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
       timeOut: 3000,
