@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LearnerProfile } from '../models/for-learner';
+import { Learner } from '../models/learner';
+
 import { ForlearnerService } from '../services/forlearner.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ForlearnerService } from '../services/forlearner.service';
   styleUrls: ['./forlearner.component.css']
 })
 export class ForlearnerComponent implements OnInit {
-  learner: LearnerProfile= new LearnerProfile();
+  learner: Learner= new Learner();
   learners:any;
   errMessage: string="" ;
 

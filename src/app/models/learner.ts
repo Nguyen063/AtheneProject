@@ -1,4 +1,4 @@
-export class LearnerProfile{
+export class Learner{
     _id: any;
     Name: string;
     Ava: string="";
