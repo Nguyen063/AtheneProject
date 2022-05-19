@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ForstudentComponent } from './forstudent/forstudent.component';
 import { FortutorComponent } from './fortutor/fortutor.component';
 import { BlogComponent } from './blog/blog.component';
 import { IntropageComponent } from './intropage/intropage.component';
@@ -28,7 +27,6 @@ import { ForlearnerComponent } from './forlearner/forlearner.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ForstudentComponent,
     FortutorComponent,
     BlogComponent,
     IntropageComponent,
