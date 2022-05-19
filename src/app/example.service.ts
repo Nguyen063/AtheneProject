@@ -33,7 +33,7 @@ export class ExampleService {
   }
 
   getIntros():Observable<Intro[]>{
-    return this._http.get<Intro[]>(`${baseUrl}/intropage`).pipe(
+    return this._http.get<Intro[]>(`${baseUrl}/intros`).pipe(
       retry(3),
       catchError(this.handleError)
     )
