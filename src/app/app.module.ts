@@ -27,6 +27,7 @@ import { ForlearnerComponent } from './forlearner/forlearner.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    ForlearnerComponent,
     FortutorComponent,
     BlogComponent,
     IntropageComponent,
@@ -40,7 +41,6 @@ import { ForlearnerComponent } from './forlearner/forlearner.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule, 
-    FormsModule,
     FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({

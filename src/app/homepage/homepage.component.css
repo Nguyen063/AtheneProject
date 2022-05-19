@@ -53,7 +53,7 @@
 
 .user__item-left {
     background-color: #3EB8D7;
-    flex: 1;
+    /* flex: 1; */
 }
 
 .user__item-middle {
