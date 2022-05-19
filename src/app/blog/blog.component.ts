@@ -42,7 +42,7 @@ export class BlogComponent implements OnInit {
     // console.log("Model: ", this.product);
   
     if(this.blog._id==""){
-      this._service.postProduct(this.blog).subscribe(res=>{
+      this._service.postBlog(this.blog).subscribe(res=>{
         // console.log("Res: ", res);
         let resData=JSON.parse(JSON.stringify(res));
         if(resData.message ==="Success"){

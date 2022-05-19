@@ -3,6 +3,8 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http'
 import { catchError, Observable, retry, throwError } from 'rxjs';
 import { IBlog } from './interfaces/blogs';
 import { Blog } from './models/blog';
+import { IHomepage } from './interfaces/homepages';
+import { Homepage } from './models/homepage';
 
 
 const baseUrl="http://localhost:3000"
@@ -22,11 +24,19 @@ export class ExampleService {
       catchError(this.handleError)
     )
   }
+  getHomepage(): Observable<IHomepage[]>{
+    return this._http.get<IHomepage[]>(`${baseUrl}/homepage`).pipe(
+      retry(3),
+      catchError(this.handleError)
+    )
+  }
 
-
-  postProduct(data: Blog){
+  postBlog(data: Blog){
 return this._http.post(`${baseUrl}/blog`,data)
   }
+  postHomepage(data: Homepage){
+    return this._http.post(`${baseUrl}/homepage`,data)
+      }
 
   updateProduct(id:any, data:any){
     return this._http.patch(`${baseUrl}/${id}`,data)
