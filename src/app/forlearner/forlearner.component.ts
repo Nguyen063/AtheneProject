@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
-
 import { ForlearnerService } from '../services/forlearner.service';
 
 @Component({

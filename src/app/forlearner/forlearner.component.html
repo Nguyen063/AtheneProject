@@ -1,11 +1,10 @@
-
- <!-- Intro content -->
- <div class="filter-container">
+<!-- Intro content -->
+<div class="filter-container">
     <div class="filter__item">
-        <div class="filter-spacing"><i class="fa fa-edit filter-icon"></i>
-            <button id="btn_dangki" class="btn_register"><a href="#"> Đăng ký tìm gia sư</a></button>
+        <div class="filter-spacing"><i class="bi bi-pencil-square filter-icon"></i>
+            <button id="btn_dangki"><a href="#"> Đăng ký tìm gia sư</a></button>
         </div>
-        <div><i class='fa fa-tasks filter-icon'></i>
+        <div><i class="bi bi-list-task filter-icon"></i>
             <a href=" ../Data/Price.html "> Bảng giá tham khảo</a>
         </div>
 
@@ -84,36 +83,51 @@
         </select>
         </div>
         <div class="search-container">
-            <input onclick="searchForStudent()" class="filter-search" type="button" value="Tìm kiếm">
-            <i class="fa fa-search"></i>
+            <input onclick="searchForStudent()" class="filter-search text-white" type="button" value="Tìm kiếm">
+            <i class="bi bi-search"></i>
         </div>
     </div>
 </div>
 <!-- Nội dung -->
-<div class="profile-container">
-    <div class="profile__item" *ngFor="let l of learners">
-        <div>
-            <img class="avatar" src="https://i.pinimg.com/originals/dd/57/8a/dd578a8891450af5d5d2dba8f3c5195f.jpg" alt="">
-            <div class="profile__item--right">
-                <div class="profile-name">{{l.Name}}</div>
-                <div><i class="fa fa-map-marker profile-icon"></i>{{l.Direct}}</div>
-                    <p><i class="fa fa-user  profile-icon"></i> {{l.Gender}}</p>
+<div class="profile-container" *ngFor="let l of learners">
+    <div class="profile__item m-2 p-1">
+        <img class="avatar mt-3" src="http://localhost:3000/{{l.Ava}}" alt="Lỗi">
+        <div class="profile__item--right">
+            <div class="profile-name mt-2 mb-3 fw-bold">{{l.Name}}</div>
+            <div class="mb-1"><i class="bi bi-geo-alt-fill profile-icon"></i>{{l.Direct}}</div>
+            <p><i class="bi bi-person-fill profile-icon"></i> {{l.Gender}}</p>
         </div>
-        <div class="profile__item--center">
-            <p>Trình độ: <span class="text-spacing">{{l.Education}}</span></p>
-            <p>Môn đăng ký: <span class="text-spacing">{{l.Subject}}</span></p>
-            <p>Mức lương: <span class="text-spacing">{{l.Fee}}</span></p>
-            <p>Yêu cầu: <span class="text-spacing">{{l.Request}}</span></p>
+        <div class="profile__item--center mx-4 mt-4">
+            <div class="row px-3 pt-2">
+                <div class="col-md-3 mb-2 ">Môn học:</div>
+                <div class="col-md-9 mb-2">{{l.Subject}}</div>
+                <div class="w-100"></div>
+                <div class="col-md-3 mb-2">Lớp dạy:</div>
+                <div class="col-md-9 mb-2">{{l.class}}</div>
+                <div class="w-100"></div>
+                <div class="col-md-3 mb-2">Học phí: </div>
+                <div class="col-md-9 mb-2">{{l.Fee}}</div>
+                <div class="w-100"></div>
+                <div class="col-md-3 mb-4">Học vấn:</div>
+                <div class="col-md-9 mb-4">{{l.Education}}</div>
+            </div>
+
         </div>
-        <div class="profile__item--below">
-            <button class="profile__button">Đăng ký nhận lớp</button>
+        <div class="profile__item--below pb-3">
+            <button class="profile__button text-white">Đăng ký </button>
+            <button class="profile__button text-white">Xem Profile </button>
         </div>
     </div>
-</div> 
-    </div>
 
-
+</div>
 <!-- Previous, Next page-->
-<div class="transfer-page">
-    <a href="# "><i class="fa fa-long-arrow-left"></i>Trang trước</a><a href="#">Trang sau<i class="fa fa-long-arrow-right"></i></a>
+<div class="transfer-page row text-center mb-3">
+    <div class="col ">
+        <a href="# "><i class="bi bi-arrow-left"></i>    Trang trước</a>
+    </div>
+    <div class="col">
+        <a href="#">Trang sau    <i class="bi bi-arrow-right"></i></a>
+    </div>
+
+
 </div>
