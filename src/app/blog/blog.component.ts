@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ExampleService } from '../example.service';
+
 import {NgForm} from '@angular/forms'
 import { Blog } from '../models/blog';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
+import { BlogintroService } from '../services/blogintro.service';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class BlogComponent implements OnInit {
   blogs: any;
   errMessage: string="";
   blog: Blog=new Blog();
-    constructor(private _service: ExampleService, private _toast: ToastrService, private _router: Router) { }
+    constructor(private _service: BlogintroService, private _toast: ToastrService, private _router: Router) { }
   
     ngOnInit(): void {
      this.getBlogs();

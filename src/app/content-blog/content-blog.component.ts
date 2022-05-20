@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ExampleService } from '../example.service';
 import { Blog } from '../models/blog';
+import { BlogintroService } from '../services/blogintro.service';
 
 @Component({
   selector: 'app-content-blog',
@@ -14,7 +14,7 @@ export class ContentBlogComponent implements OnInit {
   blogs: any;
   errMessage: string="";
   blog: Blog=new Blog();
-  constructor(private _service: ExampleService, private _activatedRouter: ActivatedRoute, private _router: Router) { }
+  constructor(private _service: BlogintroService, private _activatedRouter: ActivatedRoute, private _router: Router) { }
 
   ngOnInit(): void {
     this.getBlogs();

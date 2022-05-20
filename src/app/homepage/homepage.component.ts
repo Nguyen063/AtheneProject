@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ExampleService } from '../example.service';
-
 
 @Component({
   selector: 'app-homepage',
@@ -11,7 +9,7 @@ export class HomepageComponent implements OnInit {
 
 
 
-  constructor(private _service:ExampleService) { }
+  constructor() { }
 
   ngOnInit(): void {
    

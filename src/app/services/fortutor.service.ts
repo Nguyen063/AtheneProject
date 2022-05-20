@@ -1,21 +1,18 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, retry, throwError } from 'rxjs';
-import { Learner } from '../models/learner';
-
-
-
+import { Tutor } from '../models/tutor';
 
 const baseUrl="http://localhost:3000"
 
 @Injectable({
   providedIn: 'root'
 })
-export class ForlearnerService {
+export class FortutorService {
 
   constructor(private _http: HttpClient) { }
-  getLearner(): Observable<Learner[]>{
-    return this._http.get<Learner[]>(`${baseUrl}/learners`).pipe(
+  getTutors(): Observable<Tutor[]>{
+    return this._http.get<Tutor[]>(`${baseUrl}/tutors`).pipe(
       retry(3),
       catchError(this.handleError)
     )

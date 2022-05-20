@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FortutorService } from '../services/fortutor.service';
 
 @Component({
   selector: 'app-fortutor',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FortutorComponent implements OnInit {
 
-  constructor() { }
+tutors:any;
+errMessage: string="" ;
 
-  ngOnInit(): void {
-  }
+constructor(private _service: FortutorService) { }
 
+ngOnInit(): void {
+  this.getTutors()
+} 
+getTutors(){
+  this._service.getTutors().subscribe({
+    next:data => this.tutors=data,
+    error : err=> this.errMessage=err
+  })
+ }
 }

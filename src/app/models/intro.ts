@@ -1,4 +1,7 @@
 export class Intro{
+    getIntros() {
+      throw new Error('Method not implemented.');
+    }
     _id:any;
     title: string;
     title1: string;
@@ -10,6 +13,10 @@ export class Intro{
     content5:string;
     content6:string;
     content7:string;
+    banner:string;
+    imgStudent:string;
+    imgParent:string;
+    imgTutor:string;
     constructor(){
         this._id="";
         this.title="";
@@ -22,5 +29,9 @@ export class Intro{
          this.content5="";
          this.content6="";
          this.content7="";
-    }
-}
+         this.banner="";
+         this.imgStudent="";
+         this.imgParent="";
+         this.imgTutor="";
+       }
+  }

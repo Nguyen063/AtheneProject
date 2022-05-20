@@ -2,9 +2,6 @@
     <app-header></app-header>
 </div> -->
 
-<head>
-    <link href='http://fonts.googleapis.com/css?family=Roboto'>
-</head>
 
 <img id="image-header" src="assets/Images/Blog/banner_blog.jpg" alt="Lỗi">
 
@@ -27,7 +24,7 @@
     <!-- Right Content -->
     <div class="blog-right">
         <b style="font-weight: bold; margin-left:3rem; font-size: 1.4rem;">Tin tức</b>
-        <div class="row mb-3 mt-3 item" *ngFor="let p of blogs, let i =index" class="{{isSelect(p) ? 'selected' : ''}}" (click)="onSelect(p)">
+        <div class="row mb-3 mt-3 item" *ngFor="let p of blogs" class="{{isSelect(p) ? 'selected' : ''}}" (click)="onSelect(p)">
             <div class="col-sm-4">
                 <img class="img-responsive" src="http://localhost:3000/{{p.thumbPath}}">
             </div>

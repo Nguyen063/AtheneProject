@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Learner } from '../models/learner';
+
 
 import { ForlearnerService } from '../services/forlearner.service';
 
@@ -9,7 +9,7 @@ import { ForlearnerService } from '../services/forlearner.service';
   styleUrls: ['./forlearner.component.css']
 })
 export class ForlearnerComponent implements OnInit {
-  learner: Learner= new Learner();
+
   learners:any;
   errMessage: string="" ;
 
@@ -25,3 +25,4 @@ export class ForlearnerComponent implements OnInit {
     })
    }
 }
+
