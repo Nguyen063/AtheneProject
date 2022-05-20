@@ -3,21 +3,20 @@ export class Learner{
     throw new Error('Method not implemented.');
   }
   _id: any;
-  name: string;
-  followers: string="";
-  direct: string="";
-  gender: String="";
- subject: String="";
-  fee: String="";
-  request:String="";
+  Name: string;
+  Ava: string="";
+  Direct: string="";
+  Gender: String="";
+ Subject: String="";
+  Fee: String="";
+  Education: String="";
+  class: String="";
+  Level: String="";  
 
-grade: String="";
-
-caphoc: String="";
-
-     constructor(){
-         this._id="";
-         this.name="";
+   constructor(){
+       this._id="";
+       this.Name="";
+      // this.exp1="";
 
      }
 }
