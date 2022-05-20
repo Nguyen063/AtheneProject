@@ -4,38 +4,37 @@
     <img id="intro-banner" src="http://localhost:3000/{{i.banner}}" alt="Lỗi">
 
     <div class="intro-page">
-        <h3 id="title">{{i.title}}</h3>
+        <h3 id="title" class="text-center">{{i.title}}</h3>
         <p>{{i.content}} <b>ATHENE – GIẢI PHÁP TÌM KIẾM GIA SƯ DỄ DÀNG.</b></p>
-        <p>{{i.content1}}<span class="text-bold">Athene.</span></p>
-        <!-- <a href="./index.html" style="text-decoration: none;"><button class="discover-click">Khám phá ngay</button></a> -->
-        <button class="discover-click" routerLink="/" routerLinkActive="active">Khám phá ngay</button>
-        <p class=" text-bold ">{{i.title1}}</p>
+        <p>{{i.content1}}<span class="fw-bold"> Athene.</span></p>
+        <button class="discover-click text-center text-white" routerLink="/" routerLinkActive="active">Khám phá ngay</button>
+        <p class="fw-bold">{{i.title1}}</p>
 
         <div>
             <div class="content-body ">
-                <img id="images_forStudent " src="http://localhost:3000/{{i.imgStudent}}" alt="Lỗi ">
-                <p class="vertical-text "><span class="text-bold ">Đối với học viên, </span>{{i.content2}}
+                <img src="http://localhost:3000/{{i.imgStudent}} " alt="Lỗi ">
+                <p class="vertical-text "><span class="fw-bold ">Đối với học viên, </span>{{i.content2}}
                 </p>
             </div>
         </div>
         <div>
-            <div class="content-body " style="background-color: white; ">
-                <p class="vertical-text "> <span class="text-bold ">Đối với phụ huynh,</span>{{i.content3}}
+            <div class="content-body content-body-forParent " style="background-color: white; ">
+                <p class="vertical-text "> <span class="fw-bold ">Đối với phụ huynh,</span>{{i.content3}}
                 </p>
-                <img id="images_forParent " src="http://localhost:3000/{{i.imgParent}}" alt="Lỗi ">
+                <img class="p-3" src="http://localhost:3000/{{i.imgParent}}" alt="Lỗi ">
             </div>
         </div>
         <div>
             <div class="content-body ">
-                <img id="images_forTutor " src="http://localhost:3000/{{i.imgTutor}}" alt="Lỗi ">
-                <p class="vertical-text "><span class="text-bold ">Đối với gia sư, </span>{{i.content4}}
+                <img class="p-3" src="http://localhost:3000/{{i.imgTutor}} " alt="Lỗi ">
+                <p class="vertical-text "><span class="fw-bold ">Đối với gia sư, </span>{{i.content4}}
                 </p>
             </div>
         </div>
         <div>
-            <p><span class="text-color ">Athena </span>{{i.content5}}</p>
-            <p>{{i.content6}}</p>
-            <p>Chúng tôi - <span class="text-color ">Athena </span>{{i.content7}}</p>
+            <p><span class="text-danger fw-bold ">Athena </span>{{i.content5}}</p>
+            <p>{{i.contenta}}</p>
+            <p>Chúng tôi - <span class="text-danger fw-bold ">Athena </span>{{i.content7}}</p>
         </div>
     </div>
 </div>
