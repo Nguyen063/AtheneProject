@@ -8,6 +8,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { IntropageComponent } from './intropage/intropage.component';
 import { ShowProfileComponent } from './show-profile/show-profile.component';
 import { TutorProfileComponent } from './tutor-profile/tutor-profile.component';
+import { ContentAtheneComponent } from './content-athene/content-athene.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'fortutor', component: FortutorComponent },
   { path: 'intropage', component: IntropageComponent },
   { path: 'tutorprofile', component: TutorProfileComponent },
-  { path: 'showprofile', component: ShowProfileComponent }
+  { path: 'showprofile', component: ShowProfileComponent },
+  { path: 'homepage/:id', component: ContentAtheneComponent }
 ];
 
 @NgModule({

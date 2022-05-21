@@ -1,0 +1,33 @@
+* {
+    font-family: 'Roboto';
+}
+
+.term-container {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+hr {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    height: 4px;
+    width: 40%;
+}
+
+.deMuc {
+    padding-left: 3.5rem;
+}
+
+@media screen and (max-width: 860px) {
+    .term-container {
+        margin-top: 2.5rem;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .term-container h2 {
+        font-size: 3rem;
+        margin-bottom: -1rem;
+    }
+}

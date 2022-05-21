@@ -17,6 +17,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { ContentBlogComponent } from './content-blog/content-blog.component';
 import { ShowProfileComponent } from './show-profile/show-profile.component';
 import { ForlearnerComponent } from './forlearner/forlearner.component';
+import { ContentAtheneComponent } from './content-athene/content-athene.component';
 
 
 
@@ -35,7 +36,8 @@ import { ForlearnerComponent } from './forlearner/forlearner.component';
     HomepageComponent,
     ContentBlogComponent,
     ShowProfileComponent,
-    ForlearnerComponent
+    ForlearnerComponent,
+    ContentAtheneComponent
   ],
   imports: [
     BrowserModule,

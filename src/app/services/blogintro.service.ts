@@ -4,6 +4,7 @@ import { catchError, Observable, retry, throwError } from 'rxjs';
 import { IBlog } from '../interfaces/blogs';
 import { IIntro } from '../interfaces/intros';
 import { Blog } from '../models/blog';
+import { datas } from '../models/dataAthene';
 
 
 const baseUrl="http://localhost:3000"
@@ -43,6 +44,13 @@ return this._http.post(`${baseUrl}/blog`,data)
 
   getIntros(): Observable<IIntro[]>{
     return this._http.get<IIntro[]>(`${baseUrl}/intro`).pipe(
+      retry(3),
+      catchError(this.handleError)
+    )
+  }
+
+  getDatas(): Observable<datas[]>{
+    return this._http.get<datas[]>(`${baseUrl}/abouts`).pipe(
       retry(3),
       catchError(this.handleError)
     )

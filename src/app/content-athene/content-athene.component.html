@@ -1,0 +1,26 @@
+<div class="term-container mt-2 p-5">
+    <div *ngFor="let d of datas">
+        <div [class.d-none]="d.id==selectedId?false:true">
+            <h2 class="text-center">{{d.name}}</h2>
+            <hr/>
+            <h4 class="deMuc">{{d.title1}}</h4>
+            <p>{{d.content1_1}}</p>
+            <p>{{d.content1_2}}</p>
+            <h4 class="deMuc">{{d.title2}}</h4>
+            <p>{{d.content2_1}}</p>
+            <p>{{d.content2_2}}</p>
+            <p>{{d.content2_3}}</p>
+            <h4 class="deMuc">{{d.title3}}</h4>
+            <p>{{d.content3_1}}</p>
+            <p>{{d.content3_2}}</p>
+            <h4 class="deMuc">{{d.title4}}</h4>
+            <p>{{d.content4_1}}</p>
+            <h4 class="deMuc">{{d.title5}}</h4>
+            <p>{{d.content5_1}}</p>
+            <h4 class="deMuc">{{d.title6}}</h4>
+            <p>{{d.content6_1}}</p>
+            <p>{{d.content6_2}}</p>
+        </div>
+    </div>
+    <button class="btn btn-primary mb-5" style="float:right;" (click)="goBack()">Quay lại</button>
+</div>

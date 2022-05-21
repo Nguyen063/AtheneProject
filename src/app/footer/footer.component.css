@@ -5,6 +5,10 @@
     color: white;
 }
 
+.athene {
+    font-size: 1.7rem !important;
+}
+
 .footer__item--left {
     margin-left: 6rem;
     margin-right: 4rem;
@@ -31,22 +35,18 @@
 
 .footer__item--middle a {
     text-decoration: none;
-    color: white;
-    margin-left: 3rem;
-    padding-bottom: 1rem;
+    margin-left: 2rem;
+    margin-top: -0.5rem;
 }
 
-.footer__item--middle a:hover {
+.footer__item--middle a:hover,
+.transform:hover {
     text-decoration: underline;
 }
 
 .footer__item--right {
     margin-top: 1rem;
     margin-left: 6rem;
-}
-
-.text-bold {
-    font-weight: bold;
 }
 
 #payment-logo {
@@ -79,6 +79,21 @@
 
 .footer-icon {
     font-size: 1.5rem;
+}
+
+.transform {
+    text-transform: lowercase;
+    margin-left: 3rem;
+}
+
+.transform::first-letter {
+    text-transform: capitalize;
+}
+
+* {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
 @media screen and (max-width: 600px) {
