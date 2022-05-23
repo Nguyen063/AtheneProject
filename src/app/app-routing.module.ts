@@ -11,6 +11,7 @@ import { TutorProfileComponent } from './tutor-profile/tutor-profile.component';
 import { ContentAtheneComponent } from './content-athene/content-athene.component';
 
 
+
 const routes: Routes = [
   { path: '',redirectTo:'/homepage',pathMatch:'full' },
   { path: 'homepage', component: HomepageComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'intropage', component: IntropageComponent },
   { path: 'tutorprofile', component: TutorProfileComponent },
   { path: 'showprofile', component: ShowProfileComponent },
-  { path: 'homepage/:id', component: ContentAtheneComponent }
+  { path: 'homapage/:id', component: ContentAtheneComponent }
+
 ];
 
 @NgModule({

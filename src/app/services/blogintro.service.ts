@@ -7,7 +7,9 @@ import { Blog } from '../models/blog';
 import { datas } from '../models/dataAthene';
 
 
-const baseUrl="http://localhost:3000"
+const baseUrl="http://localhost:3000";
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,9 +23,8 @@ export class BlogintroService {
       catchError(this.handleError)
     )
   }
-
-
-
+ 
+ 
   postBlog(data: Blog){
 return this._http.post(`${baseUrl}/blog`,data)
   }

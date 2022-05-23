@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FortutorService } from '../services/fortutor.service';
 
 @Component({
@@ -10,11 +11,14 @@ export class FortutorComponent implements OnInit {
 
 tutors:any;
 errMessage: string="" ;
+selectedId:any;
+  file:any=null;
 
-constructor(private _service: FortutorService) { }
+constructor(private _service: FortutorService, private _router:Router) { }
 
 ngOnInit(): void {
-  this.getTutors()
+  this.getTutors();
+
 } 
 getTutors(){
   this._service.getTutors().subscribe({
@@ -23,3 +27,12 @@ getTutors(){
   })
  }
 }
+
+
+
+  
+
+
+
+ 
+  
