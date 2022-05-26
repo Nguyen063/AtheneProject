@@ -89,27 +89,27 @@
     </div>
 </div>
 <!-- Nội dung -->
-<div class="profile-container" *ngFor="let l of learners">
-    <div class="profile__item m-2 p-1">
-        <img class="avatar mt-3" src="http://localhost:3000/{{l.Ava}}" alt="Lỗi">
+<div class="profile-container">
+    <div class="profile__item m-2 p-1" *ngFor="let l of learners">
+        <img class="avatar mt-3" src="http://localhost:3000/{{l.LearnerInfo.Ava}}" alt="Lỗi">
         <div class="profile__item--right">
-            <div class="profile-name mt-2 mb-3 fw-bold">{{l.Name}}</div>
-            <div class="mb-1"><i class="bi bi-geo-alt-fill profile-icon"></i>{{l.Direct}}</div>
-            <p><i class="bi bi-person-fill profile-icon"></i> {{l.Gender}}</p>
+            <div class="profile-name mt-2 mb-3 fw-bold">{{l.LearnerInfo.Name}}</div>
+            <div class="mb-1"><i class="bi bi-geo-alt-fill profile-icon"></i>{{l.LearnerInfo.Direct}}</div>
+            <p><i class="bi bi-person-fill profile-icon"></i> {{l.LearnerInfo.Gender}}</p>
         </div>
         <div class="profile__item--center mx-4 mt-4">
             <div class="row px-3 pt-2">
                 <div class="col-md-3 mb-2 ">Môn học:</div>
-                <div class="col-md-9 mb-2">{{l.Subject}}</div>
+                <div class="col-md-9 mb-2">{{l.TutorFinding.Subject}}</div>
                 <div class="w-100"></div>
                 <div class="col-md-3 mb-2">Lớp dạy:</div>
-                <div class="col-md-9 mb-2">{{l.class}}</div>
+                <div class="col-md-9 mb-2">{{l.TutorFinding.class}}</div>
                 <div class="w-100"></div>
                 <div class="col-md-3 mb-2">Học phí: </div>
-                <div class="col-md-9 mb-2">{{l.Fee}}</div>
+                <div class="col-md-9 mb-2">{{l.TutorFinding.Fee}}</div>
                 <div class="w-100"></div>
                 <div class="col-md-3 mb-4">Học vấn:</div>
-                <div class="col-md-9 mb-4">{{l.Education}}</div>
+                <div class="col-md-9 mb-4">{{l.TutorFinding.Education}}</div>
             </div>
 
         </div>

@@ -14,7 +14,9 @@ export class ForlearnerComponent implements OnInit {
   constructor(private _service: ForlearnerService) { }
 
   ngOnInit(): void {
-    this.getLearner()
+    // this.getLearnerInfor()
+    // this.getTutorFinding()
+    this.getLearner();
   } 
   getLearner(){
     this._service.getLearner().subscribe({
@@ -22,5 +24,6 @@ export class ForlearnerComponent implements OnInit {
       error : err=> this.errMessage=err
     })
    }
+  
 }
 
