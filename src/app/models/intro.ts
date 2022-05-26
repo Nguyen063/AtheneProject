@@ -1,7 +1,4 @@
 export class Intro{
-    getIntros() {
-      throw new Error('Method not implemented.');
-    }
     _id:any;
     title: string;
     title1: string;

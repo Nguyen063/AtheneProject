@@ -20,9 +20,9 @@ export class Profile{
     teachingTime: String="";
     timeTable: String="";
     more: String="";
-    //Exps:Array=[exp1,exp2]
-    //Exps=[{exp1:string="", exp2:string, exp3:string}];
-   // Achievements:[ach1:string,ach2:string,ach3:string]
+  //   Exps:Array=[exp1,exp2]
+  //   Exps=[{exp1:string="", exp2:string, exp3:string}];
+  //  Achievements:[ach1:string,ach2:string,ach3:string]
 
      constructor(){
          this._id="";
