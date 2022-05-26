@@ -98,25 +98,25 @@
 <!-- Nội dung -->
 <div class="profile-container " *ngFor="let t of tutors ">
     <div class="profile__item m-2 p-1 ">
-        <img class="avatar mt-3 " src="http://localhost:3000/{{t.Ava}} " alt="Lỗi ">
+        <img class="avatar mt-3 " src="http://localhost:3000/{{t.TutorInfo.Ava}} " alt="Lỗi ">
         <div class="profile__item--right ">
-            <div class="profile-name mt-2 mb-3 fw-bold ">{{t.Name}}</div>
-            <div class="mb-1 "><i class="bi bi-geo-alt-fill profile-icon "></i>{{t.Direct}}</div>
-            <p><i class="bi bi-person-fill profile-icon "></i> {{t.Gender}}</p>
+            <div class="profile-name mt-2 mb-3 fw-bold ">{{t.TutorInfo.Name}}</div>
+            <div class="mb-1 "><i class="bi bi-geo-alt-fill profile-icon "></i>{{t.TutorInfo.Direct}}</div>
+            <p><i class="bi bi-person-fill profile-icon "></i> {{t.TutorInfo.Gender}}</p>
         </div>
         <div class="profile__item--center mx-4 mt-4 ">
             <div class="row px-2 pt-2 ">
                 <div class="col-md-4 mb-2 ">Trình độ:</div>
-                <div class="col-md-8 mb-2 ">{{t.Education}}</div>
+                <div class="col-md-8 mb-2 ">{{t.TutorInfo.Education}}</div>
                 <div class="w-100 "></div>
                 <div class="col-md-4 mb-2 ">Môn đăng ký:</div>
-                <div class="col-md-8 mb-2 ">{{t.Subject}}</div>
+                <div class="col-md-8 mb-2 ">{{t.LearnerFinding.Subject}}</div>
                 <div class="w-100 "></div>
                 <div class="col-md-4 mb-2 ">Mức lương: </div>
-                <div class="col-md-8 mb-2 ">{{t.Fee}}</div>
+                <div class="col-md-8 mb-2 ">{{t.LearnerFinding.Fee}}</div>
                 <div class="w-100 "></div>
                 <div class="col-md-4 mb-4 ">Yêu cầu:</div>
-                <div class="col-md-8 mb-4 ">{{t.Request}}</div>
+                <div class="col-md-8 mb-4 ">{{t.LearnerFinding.Other}}</div>
             </div>
 
         </div>
