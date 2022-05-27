@@ -1,74 +1,50 @@
 export class Learner{
-    LearnerInfo=Object({ 
+    TutorInfo=Object({ 
         Name: String,
         Ava: String,
         Direct: String,
         Gender: String,
         DOB: String,
         CCCD: String,
-        PhoneNumber: String});
-    TutorFinding=Object({
-    Level: String,
-    TutorGender: String,
-    class: String,
+        PhoneNumber: String,
+        Exp: String,
+        Degree: String,
+        Education: String,
+        Majoy: String
+    });
+    LearnerFinding=Object({
+    Caphoc: String,
     Subject: String,
+    LearnerGender: String,
     Location: String,
-    Education: String,
     TeachingTime: String,
     Schedule: String,
-    Request: String, 
     Fee: String,
     Other: String
-        })
+     })
     
-     constructor( ){
-      this.LearnerInfo.Name="";
-      this.LearnerInfo.Ava="";
-      this.LearnerInfo.Direct="";
-      this.LearnerInfo.Gender="";
-      this.LearnerInfo.DOB="";
-      this.LearnerInfo.CCCD="";
-      this.LearnerInfo.PhoneNumber="";
-     this.TutorFinding.Level="";
-             this.TutorFinding.TutorGender="";
-             this.TutorFinding.class="";
-             this.TutorFinding.Subject="";
-             this.TutorFinding.Location="";
-             this.TutorFinding.Education="";
-             this.TutorFinding.TeachingTime="";
-             this.TutorFinding.Schedule="";
-             this.TutorFinding.Request="";
-             this.TutorFinding.Fee="";
-             this.TutorFinding.Other="";
+    constructor(){
+        this.TutorInfo.Name="";
+        this.TutorInfo.Ava="";
+        this.TutorInfo.Direct="";
+        this.TutorInfo.Gender="";
+        this.TutorInfo.DOB="";
+        this.TutorInfo.CCCD="";
+        this.TutorInfo.PhoneNumber="";
+        this.TutorInfo.Exp="";
+        this.TutorInfo.Degree="";
+        this.TutorInfo.Education="";
+        this.TutorInfo.Majoy="";
+
+        this.LearnerFinding.Caphoc="";
+        this.LearnerFinding.LearnerGender="";
+        this.LearnerFinding.Subject="";
+        this.LearnerFinding.Location="";
+        this.LearnerFinding.TeachingTime="";
+        this.LearnerFinding.Schedule="";
+        this.LearnerFinding.Fee="";
+        this.LearnerFinding.Other="";
 
      }
 }
-
-// export class TutorFinding{
-//     Level: String;
-//     TutorGender: String;
-//     class: String;
-//     Subject: String;
-//     Location: String;
-//     Education: String;
-//     TeachingTime: String;
-//     Schedule: String;
-//     Request: String; 
-//     Fee: String;
-//     Other: String; 
-
-//     constructor(){
-//         this.Level="";
-//         this.TutorGender="";
-//         this.class="";
-//         this.Subject="";
-//         this.Location="";
-//         this.Education="";
-//         this.TeachingTime="";
-//         this.Schedule="";
-//         this.Request="";
-//         this.Fee="";
-//         this.Other="";
-//     }
-// }
 
