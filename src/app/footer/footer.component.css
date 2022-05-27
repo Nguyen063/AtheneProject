@@ -6,12 +6,12 @@
 }
 
 .athene {
-    font-size: 1.7rem !important;
+    font-size: 1.7em !important;
 }
 
 .footer__item--left {
-    margin-left: 6rem;
-    margin-right: 4rem;
+    margin-left: 3rem;
+    margin-right: 2em;
 }
 
 .logo-display {
@@ -47,7 +47,6 @@
 
 .footer__item--right {
     margin-top: 1rem;
-    margin-left: 4rem;
 }
 
 #payment-logo {
@@ -94,7 +93,7 @@
 * {
     font-family: 'Roboto';
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.5vw;
 }
 
 @media screen and (max-width: 600px) {
@@ -105,7 +104,7 @@
         display: block;
         background-color: #0077C0;
         text-align: center;
-        font-size: 2rem;
+        font-size: 18px;
     }
     .footer__item--middle{
         font-size:  1rem;

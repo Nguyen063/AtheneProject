@@ -31,17 +31,21 @@
     }
 } */
 
-
+/* .banner-image {
+    max-height: 25rem;
+    margin-top: 3rem;
+    width: 100%;
+} */
 /* User flow CSS */
-
 .title {
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: bold;
     margin: 1rem;
 }
 
 * {
     font-family: 'Roboto';
+    font-size: 1.3vw;
 }
 
 
@@ -51,6 +55,7 @@
 
 .user-flow {
     display: flex;
+    font-size: 10px;
 }
 
 .user__item-left {
@@ -78,7 +83,7 @@
     text-align: center;
     font-size: 17px;
     width: 30px;
-    margin: 0.5rem auto 0 auto;
+    margin: 0.5rem auto 0.5rem auto;
 }
 
 
@@ -94,26 +99,25 @@
 }
 
 #vision {
-    margin-left: 5rem;
+    margin-left: 4rem;
 }
 
 #mission {
-    margin-left: 15rem;
+    margin-left: 6rem;
 }
 
 #core-value {
-    margin-left: 25rem;
+    margin-left: 8rem;
 }
 
 #company-photo {
-    height: 16rem;
-    padding: 0 6rem 2rem;
+    height: 16em;
+    padding: 0 8em 3em;
     min-height: 120px;
 }
 
 .title-color {
     color: #00008B;
-    font-size: 1.4rem;
     margin: 0;
     font-weight: bold;
 }
@@ -121,9 +125,9 @@
 
 /* Our Strength */
 
-.strength-title {
+/* .strength-title {
     font-size: 1.7rem;
-}
+} */
 
 .our-strength {
     background-color: #0077C0;
@@ -155,6 +159,7 @@
     height: 5rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5px;
     min-height: 50px;
     min-width: 50px;
 }
@@ -170,13 +175,13 @@
 
 .about-us {
     display: flex;
-    margin-right: 5rem;
+    margin-right: 10px;
     line-height: 2rem;
 }
 
 #us-photo {
-    height: 15rem;
-    margin: 0.5rem 3rem;
+    height: 15em;
+    margin: 20px 6em;
     min-height: 120px;
 }
 
@@ -195,39 +200,49 @@
     font-size: 1rem;
 }
 
+@media screen and (max-width: 800px) {
+    *{
+        font-size: 2vw;
+    }
+    #us-photo {
+        margin: 10px 5px;
+    }
+    #company-photo {
+        padding: 0 10px 10px;
+    }
+}
 @media screen and (max-width: 600px) {
     #mission,
     #vision,
     #core-value {
-        margin: 2rem;
+        margin: 0 2rem;
     }
-    .company__item--left p {
+    /* .company__item--left p {
         margin: 1rem 1rem 1rem 0;
-    }
+    } */
     .strength-container p {
         display: none;
     }
     .title {
-        font-size: 2.5rem;
+        font-size: 19px;
     }
-    .user-flow,
+    *{
+        font-size: 12px;
+    }
+    /* .user-flow,
     .company__item--left,
     .us__item--right {
         font-size: 1.8rem;
-    }
+    } */
     .userflow-title,
     .title-color {
-        font-size: 2rem;
         font-weight: bold;
     }
-    .us__item--right {
+    h4{
+        font-size: 15px;
+    }
+    /* .us__item--right {
         margin: 1rem;
         line-height: 3rem;
-    }
-    #company-photo {
-        height: 30rem;
-    }
-    #us-photo {
-        height: 30rem;
-    }
+    } */
 }

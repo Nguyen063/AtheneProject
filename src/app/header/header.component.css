@@ -1,3 +1,4 @@
+/* Dòng 36, 75, 80, 139, 181, 345, 295 */
 
 .header-content {
     width: 100%;
@@ -29,6 +30,7 @@
 
 /*Left responsive*/
 
+
 @media screen and (max-width: 600px) {
     #logo {
         display: none;
@@ -57,7 +59,7 @@
         font-size: 12px;
     }
     .header__item--middle  a {
-        padding: 0 0.5em;
+        padding: 0 0.4em;
     }
     .athene{
         font-size: 18px;
@@ -135,6 +137,9 @@
 @media screen and (max-width: 600px) {
     .signUp-button {
         display: none;
+    }
+    .header__item--right input {
+        margin-top: 0.6rem;
     }
 }
 
@@ -349,7 +354,6 @@ hr {
     .header__item--right input {
         height: fit-content;
         border: none;
-        margin-top: 0.6rem;
     }
 }
 
