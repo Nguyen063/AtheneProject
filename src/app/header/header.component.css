@@ -57,7 +57,7 @@
         font-size: 12px;
     }
     .header__item--middle  a {
-        padding: 0;
+        padding: 0 0.5em;
     }
     .athene{
         font-size: 18px;
