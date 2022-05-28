@@ -47,7 +47,11 @@
     font-family: 'Roboto';
     font-size: 1.3vw;
 }
-
+.banner-image {
+    height: 25rem;
+    margin-top: 0.5rem;
+    width: 100%;
+}
 
 /* .userflow-title {
     font-size: 1.3rem;

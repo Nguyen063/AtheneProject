@@ -178,22 +178,21 @@
 
 .login,
 .signup {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    left: 18rem;
-    top: 4rem;
-    width: 50%;
-    color: white;
-    background-image: assets/Images/SignIn_SignUp/Background_SignIn;
-    /* background-image: url(.../Images/SignIn_SignUp/Background_SignIn.png); */
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 27rem;
-    box-shadow: rgba(0, 0, 0, 0.6) 10rem 15rem 20rem 40rem;
+
+ position: fixed;
+ /* Stay in place */
+ z-index: 2;
+ /* Sit on top */
+ left: 20rem;
+ top: 4rem;
+ width: 50%;
+ color: white;
+ background-color: orange;
+ /* background-image: url(../Images/SignIn_SignUp/Background_SignIn.png); */
+ background-size: 100%;
+ background-repeat: no-repeat;
+ height: 28rem;
+ box-shadow: rgba(0, 0, 0, 0.6) 10rem 15rem 20rem 40rem;
 }
 
 .login-content {
@@ -211,10 +210,9 @@
 }
 
 hr {
-    width: 10rem;
-    height: 0.3rem;
-    background-color: #093BBA;
-    border: none;
+    height: 0.2rem;
+      background-color: #093BBA;
+     margin: 1rem 16rem;
 }
 
 .lineSignUp {
