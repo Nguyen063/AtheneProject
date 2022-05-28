@@ -40,7 +40,7 @@
 .title {
     font-size: 2em;
     font-weight: bold;
-    margin: 1rem;
+    margin: 20px;
 }
 
 * {
@@ -225,6 +225,7 @@
     }
     .title {
         font-size: 19px;
+        margin: 5px;
     }
     *{
         font-size: 12px;

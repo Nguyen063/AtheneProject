@@ -25,7 +25,7 @@
     <div class="blog-right">
         <b style="font-weight: bold; margin-left:3rem; font-size: 1.4rem;">Tin tức</b>
         <div class="row mb-3 mt-3 item" *ngFor="let p of blogs" class="{{isSelect(p) ? 'selected' : ''}}" (click)="onSelect(p)">
-            <div class="col-sm-4">
+            <div class="col-sm-4 text-center">
                 <img class="img-responsive" src="http://localhost:3000/{{p.thumbPath}}">
             </div>
             <div class="col-sm-8 ml-1 p-3">

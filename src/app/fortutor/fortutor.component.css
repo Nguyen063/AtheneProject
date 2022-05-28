@@ -4,6 +4,12 @@
       font-family: 'Roboto';
   }
   
+.tutor-title{
+    flex-basis: 35%;
+}
+.tutor-content{
+  flex-basis: 65%;
+}
   .filter-container {
       font-size: 1rem;
       display: flex;
@@ -85,7 +91,7 @@
   }
   
   .profile__item--right {
-      margin-left: 11rem;
+      margin-left: 10rem;
   }
   
   .profile-name {
@@ -128,46 +134,13 @@
   } */
   
   @media screen and (max-width: 860px) {
-      .filter-container {
-          font-size: 1.5rem;
-      }
-      .filter-selection {
-          padding: 0rem;
-          width: 13rem;
-          height: 2.8rem;
-          font-size: 1.3rem;
-      }
-      .filter-search {
-          font-size: 1.6rem;
-      }
-      .filter-spacing {
-          margin-top: 3rem;
-      }
       .profile__item {
           flex-basis: 40%;
       }
       .profile-container {
-          font-size: 2rem;
+          /* font-size: 2rem; */
           flex-direction: column;
           margin: 1rem 6rem;
-      }
-      .avatar {
-          height: 11rem;
-          margin: 0.5rem 4rem;
-      }
-      .profile-name {
-          font-size: 3rem;
-          padding-top: 1rem;
-      }
-      .profile__item--center {
-          margin: 2rem 5rem;
-      }
-      .transfer-page a {
-          font-size: 1.5rem;
-      }
-      .profile__button {
-          font-size: 2rem;
-          margin-bottom: 1rem;
       }
       .btn-profile {
           width: 16rem;

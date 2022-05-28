@@ -10,8 +10,7 @@
 }
 
 .footer__item--left {
-    margin-left: 3rem;
-    margin-right: 2em;
+    margin-left: 3em;
 }
 
 .logo-display {
@@ -35,7 +34,7 @@
 
 .footer__item--middle a {
     text-decoration: none;
-    width: 200px;
+    width: 13em;
     margin-left: 1rem;
     margin-top: -0.5rem;
 }
@@ -50,9 +49,10 @@
 }
 
 #payment-logo {
-    width: 13rem;
+    width: 13em;
     padding-left: 2rem;
     margin-bottom: 0.5rem;
+    min-width: 170px;
 }
 
 .contact-logo {

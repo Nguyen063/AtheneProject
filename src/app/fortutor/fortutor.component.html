@@ -40,14 +40,23 @@
             <option value="huyennhabe ">Huyện Nhà Bè</option>
             </select>
         </div>
-        <div><select class="filter-selection " id="caphoc " name="class ">
-                <option value="caphoc ">Cấp học</option>
-                <option value="tieuhoc ">Tiểu học</option>
-                <option value="trunghoccoso ">Trung học cơ sở</option>
-                <option value="trunghocphothong ">Trung học phổ thông</option>
-                <option value="khac ">Khác</option>
-            </select>
-        </div>
+        <div><select class="filter-selection" id="class" name="class">
+            <option value="lophoc" >Lớp học</option>
+            <option value="lop1">Lớp 1</option>
+            <option value="lop2">Lớp 2</option>
+            <option value="lop3">Lớp 3</option>
+            <option value="lop4">Lớp 4</option>
+            <option value="lop5">Lớp 5</option>
+            <option value="lop6">Lớp 6</option>
+            <option value="lop7">Lớp 7</option>
+            <option value="lop8">Lớp 8</option>
+            <option value="lop9">Lớp 9</option>
+            <option value="lop10">Lớp 10</option>
+            <option value="lop11">Lớp 11</option>
+            <option value="lop12">Lớp 12</option>
+            <option value="luyenthidaihoc">Luyện thi đại học</option>
+        </select>
+    </div>
     </div>
     <div class="filter__item ">
         <div class="filter-spacing "><select class="filter-selection " id="level " name="level ">
@@ -96,8 +105,8 @@
     </div>
 </div>
 <!-- Nội dung -->
-<div class="profile-container " *ngFor="let t of tutors ">
-    <div class="profile__item m-2 p-1 ">
+<div class="profile-container " >
+    <div class="profile__item m-2 p-1 " *ngFor="let t of tutors ">
         <img class="avatar mt-3 " src="http://localhost:3000/{{t.LearnerInfo.Ava}} " alt="Lỗi ">
         <div class="profile__item--right ">
             <div class="profile-name mt-2 mb-3 fw-bold ">{{t.LearnerInfo.Name}}</div>
@@ -106,17 +115,17 @@
         </div>
         <div class="profile__item--center mx-4 mt-4 ">
             <div class="row px-2 pt-2 ">
-                <div class="col-md-4 mb-2 ">Trình độ:</div>
-                <div class="col-md-8 mb-2 ">{{t.TutorFinding.class}}</div>
+                <div class="col-md-4 mb-2 tutor-title">Trình độ:</div>
+                <div class="col-md-8 mb-2 tutor-content">{{t.TutorFinding.class}}</div>
                 <div class="w-100 "></div>
-                <div class="col-md-4 mb-2 ">Môn đăng ký:</div>
-                <div class="col-md-8 mb-2 ">{{t.TutorFinding.Subject}}</div>
+                <div class="col-md-4 mb-2 tutor-title">Môn đăng ký:</div>
+                <div class="col-md-8 mb-2 tutor-content">{{t.TutorFinding.Subject}}</div>
                 <div class="w-100 "></div>
-                <div class="col-md-4 mb-2 ">Mức lương: </div>
-                <div class="col-md-8 mb-2 ">{{t.TutorFinding.Fee}}</div>
+                <div class="col-md-4 mb-2 tutor-title">Mức lương: </div>
+                <div class="col-md-8 mb-2 tutor-content">{{t.TutorFinding.Fee}}</div>
                 <div class="w-100 "></div>
-                <div class="col-md-4 mb-4 ">Yêu cầu:</div>
-                <div class="col-md-8 mb-4 ">{{t.TutorFinding.Request}}</div>
+                <div class="col-md-4 mb-4 tutor-title">Yêu cầu:</div>
+                <div class="col-md-8 mb-4 tutor-content">{{t.TutorFinding.Request}}</div>
             </div>
 
         </div>
@@ -128,7 +137,7 @@
 
 </div>
 <!-- Previous, Next page-->
-<div class="transfer-page row text-center mb-3 ">
+<!-- <div class="transfer-page row text-center mb-3 ">
     <div class="col ">
         <a href="# "><i class="bi bi-arrow-left "></i>    Trang trước</a>
     </div>
@@ -137,4 +146,4 @@
     </div>
 
 
-</div>
+</div> -->

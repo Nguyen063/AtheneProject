@@ -2,7 +2,7 @@
 <div class="filter-container">
     <div class="filter__item">
         <div class="filter-spacing"><i class="bi bi-pencil-square filter-icon"></i>
-            <button id="btn_dangki"><a href="#"> Đăng ký tìm gia sư</a></button>
+            <a href="#"> Đăng ký tìm gia sư</a>
         </div>
         <div><i class="bi bi-list-task filter-icon"></i>
             <a href="http://localhost:3000/price.pdf "> Bảng giá tham khảo</a>
@@ -36,22 +36,13 @@
             <option value="huyennhabe">Huyện Nhà Bè</option>
             </select>
         </div>
-        <div><select class="filter-selection" id="class" name="class">
-                <option value="lophoc" >Lớp học</option>
-                <option value="lop1">Lớp 1</option>
-                <option value="lop2">Lớp 2</option>
-                <option value="lop3">Lớp 3</option>
-                <option value="lop4">Lớp 4</option>
-                <option value="lop5">Lớp 5</option>
-                <option value="lop6">Lớp 6</option>
-                <option value="lop7">Lớp 7</option>
-                <option value="lop8">Lớp 8</option>
-                <option value="lop9">Lớp 9</option>
-                <option value="lop10">Lớp 10</option>
-                <option value="lop11">Lớp 11</option>
-                <option value="lop12">Lớp 12</option>
-                <option value="luyenthidaihoc">Luyện thi đại học</option>
-            </select>
+        <div><select class="filter-selection " id="caphoc " name="class ">
+            <option value="caphoc ">Cấp học</option>
+            <option value="tieuhoc ">Tiểu học</option>
+            <option value="trunghoccoso ">Trung học cơ sở</option>
+            <option value="trunghocphothong ">Trung học phổ thông</option>
+            <option value="khac ">Khác</option>
+        </select>
         </div>
     </div>
     <div class="filter__item">
@@ -97,22 +88,20 @@
             <div class="mb-1"><i class="bi bi-geo-alt-fill profile-icon"></i>{{l.TutorInfo.Direct}}</div>
             <p><i class="bi bi-person-fill profile-icon"></i> {{l.TutorInfo.Gender}}</p>
         </div>
-        <div class="profile__item--center mx-4 mt-4">
-            <div class="row px-3 pt-2">
-                <div class="col-md-3 mb-2 ">Môn học:</div>
-                <div class="col-md-9 mb-2">{{l.LearnerFinding.Subject}}</div>
+        <div class="profile__item--center mx-4 mt-4 ">
+            <div class=" row px-3 pt-2 ">
+                <div class="col-md-3 mb-2 learner-title">Môn học:</div>
+                <div class="col-md-9 mb-2 learner-content">{{l.LearnerFinding.Subject}}</div>
                 <div class="w-100"></div>
-                <div class="col-md-3 mb-2">Cấp học:</div>
-                <div class="col-md-9 mb-2">{{l.LearnerFinding.Caphoc}}</div>
+                <div class="col-md-3 mb-2 learner-title">Cấp học:</div>
+                <div class="col-md-9 mb-2 learner-content">{{l.LearnerFinding.Caphoc}}</div>
                 <div class="w-100"></div>
-                <div class="col-md-3 mb-2">Học phí: </div>
-                <div class="col-md-9 mb-2">{{l.LearnerFinding.Fee}}</div>
+                <div class="col-md-3 mb-2 learner-title">Học phí: </div>
+                <div class="col-md-9 mb-2 learner-content">{{l.LearnerFinding.Fee}}</div>
                 <div class="w-100"></div>
-                <div class="col-md-3 mb-4">Học vấn:</div>
-                <div class="col-md-9 mb-4">{{l.TutorInfo.Education}}</div>
-
+                <div class="col-md-3 mb-4 learner-title">Học vấn:</div>
+                <div class="col-md-9 mb-4 learner-content">{{l.TutorInfo.Education}}</div>
             </div>
-
         </div>
         <div class="profile__item--below pb-3">
             <button class="profile__button text-white">Đăng ký </button>
@@ -122,7 +111,7 @@
 
 </div>
 <!-- Previous, Next page-->
-<div class="transfer-page row text-center mb-3">
+<!-- <div class="transfer-page row text-center mb-3">
     <div class="col ">
         <a href="# "><i class="bi bi-arrow-left"></i>    Trang trước</a>
     </div>
@@ -131,4 +120,4 @@
     </div>
 
 
-</div>
+</div> -->

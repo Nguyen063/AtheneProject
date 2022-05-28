@@ -1,7 +1,9 @@
 * {
     font-family: 'Roboto';
 }
-
+.introImage{
+    width: 30%;
+}
 #intro-banner {
     height: 22rem;
     width: 100%;
@@ -9,14 +11,13 @@
 
 .intro-page {
     margin: 0 3rem;
-    line-height: 3rem;
-    font-size: 1.2rem;
+    font-size: 150%;
 }
 
 #title {
-    font-size: 2rem;
-    line-height: 4rem;
-    padding: 1rem 9rem;
+    font-size: 1.5em;
+    line-height: 3rem;
+    padding: 1rem 8rem;
 }
 
 .discover-click {
@@ -48,9 +49,9 @@
 }
 
 @media screen and (max-width: 600px) {
-    .intro-page {
-        font-size: 1.8rem;
-        line-height: 3.5rem;
+    #title{
+        font-size: 20px;
+        line-height: 40px;
     }
     #images_forStudent {
         height: 14rem;
@@ -63,16 +64,15 @@
     .content-body {
         margin: 3rem -3rem;
     }
-    #title {
-        font-size: 2.5rem;
-        line-height: 4rem;
-        margin-bottom: 0.8rem;
-    }
 }
 
-@media screen and (max-width: 480px) {
-    .intro-page {
-        font-size: 2.5rem;
-        line-height: 5.0rem;
+@media screen and (max-width: 900px) {
+    #title {
+        padding: 1rem 8%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .intro-page{
+        font-size: 15px
     }
 }

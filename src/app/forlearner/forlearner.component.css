@@ -4,6 +4,13 @@
       font-family: 'Roboto';
   }
   
+  .learner-title{
+      flex-basis: 35%;
+  }
+  .learner-content{
+    flex-basis: 65%;
+  }
+
   .filter-container {
       font-size: 1rem;
       display: flex;
@@ -51,7 +58,7 @@
   }
   
   .filter-search {
-      width: 8.5rem;
+      width: 7.5rem;
       border: none;
       background-color: #F81530;
       border-radius: 0.4rem;
@@ -130,64 +137,34 @@
   }
   
   @media screen and (max-width: 860px) {
-      .filter-container {
-          font-size: 1.5rem;
-      }
-      .filter-selection {
-          padding: 0rem;
-          width: 13rem;
-          height: 2.8rem;
-          font-size: 1.3rem;
-      }
-      .filter-search {
-          font-size: 1.6rem;
-      }
-      .filter-spacing {
-          margin-top: 3rem;
-      }
       .profile__item {
           flex-basis: 40%;
       }
       .profile-container {
-          font-size: 2rem;
           flex-direction: column;
           margin: 1rem 6rem;
       }
-      .avatar {
-          height: 11rem;
+      /* .avatar {
           margin: 0.5rem 4rem;
-      }
+      } */
       .profile-name {
-          font-size: 3rem;
           padding-top: 1rem;
       }
       .profile__item--center {
           margin: 2rem 5rem;
       }
-      .transfer-page a {
+      /* .transfer-page a {
           font-size: 1.5rem;
-      }
-      .profile__button {
+      } */
+      /* .profile__button {
           font-size: 2rem;
           margin-bottom: 1rem;
-      }
+      } */
       .btn-profile {
           width: 16rem;
       }
       #btn_dangki {
           margin-left: -0.7rem;
-      }
-  }
-  
-  @media screen and (max-width: 600px) {
-      .filter-selection {
-          padding: 0rem;
-          width: 12rem;
-          height: 2.8rem;
-          font-size: 1.3rem;
-      }
-      .profile-oj {
-          min-width: 13rem;
       }
   }
   /* Pop up */
@@ -247,3 +224,9 @@
       text-decoration: none;
       cursor: pointer;
   }
+
+  @media screen and (max-width: 600px) {
+    .profile-container {
+        margin: 0 20px;
+    }
+}
