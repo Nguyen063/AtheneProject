@@ -18,6 +18,8 @@ import { ContentBlogComponent } from './content-blog/content-blog.component';
 import { ShowProfileComponent } from './show-profile/show-profile.component';
 import { ForlearnerComponent } from './forlearner/forlearner.component';
 import { ContentAtheneComponent } from './content-athene/content-athene.component';
+import { FormTutorComponent } from './form-tutor/form-tutor.component';
+import { FormLearnerComponent } from './form-learner/form-learner.component';
 
 
 
@@ -36,7 +38,9 @@ import { ContentAtheneComponent } from './content-athene/content-athene.componen
     ContentBlogComponent,
     ShowProfileComponent,
     ForlearnerComponent,
-    ContentAtheneComponent
+    ContentAtheneComponent,
+    FormTutorComponent,
+    FormLearnerComponent
   ],
   imports: [
     BrowserModule,
