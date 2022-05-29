@@ -13,6 +13,8 @@ tutors:any;
 errMessage: string="" ;
 selectedId:any;
   file:any=null;
+  confirm:boolean=true;
+  close:boolean=true;
 
 constructor(private _service: FortutorService, private _router:Router) { }
 
@@ -25,6 +27,14 @@ getTutors(){
     next:data => this.tutors=data,
     error : err=> this.errMessage=err
   })
+ }
+ openConfirm(){
+   this.confirm=!this.confirm
+ }
+ clickYes(){
+   alert("Bạn đã đăng ký thành công");
+   this.confirm=!this.confirm
+
  }
 }
 

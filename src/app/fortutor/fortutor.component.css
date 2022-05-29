@@ -170,7 +170,7 @@
 /* Pop up */
 
 .confirmation {
-    display: none;
+  
     position: fixed;
     z-index: 1;
     padding-top: 10rem;
