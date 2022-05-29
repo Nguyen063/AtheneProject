@@ -11,6 +11,7 @@ export class TutorProfileComponent implements OnInit {
   profile: Profile= new Profile();
   profiles:any;
   errMessage: string="" ;
+  open:boolean= true;
 
   constructor(private _service:ProfileService) { }
 
@@ -23,4 +24,11 @@ export class TutorProfileComponent implements OnInit {
       error : err=> this.errMessage=err
     })
    }
+
+   openEditProfile(){
+    this.open=!this.open
+ }
+ closeEdit(){
+  this.open=!this.open
+ }
 }
