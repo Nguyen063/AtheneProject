@@ -1,3 +1,4 @@
+
 <div class="profile-container" *ngFor="let p of profiles">
     <!-- Cover image -->
     <div>
@@ -51,7 +52,7 @@
                 <div class="ms-2"> {{p.wentTo}}</div>
             </div>
             <div class="edit-button">
-                <button class="btn-edit" (click)="openEditProfile()">Chỉnh sửa</button>
+                <button class="btn-edit" (click)="openEditProfile(p)">Chỉnh sửa</button>
             </div>
         </div>
 
@@ -137,13 +138,17 @@
      <!-- Pop up to edit profile -->
         <!--  Edit Pop-up -->
         <div id="myProfile" class="profile-edit" [class.d-none]="open">
+            <form #productForm="ngForm" (ngSubmit)="submitData(productForm)">
+                <!-- ID -->
+                <input type="hidden" class="form-control" name="_id"  [(ngModel)]="profile['_id']">
+                <!-- Info -->
             <div class="edit-content"> <span class="close" (click)="closeEdit()">&times;</span>
                 <div class=" edit-title">
                     Thông tin cá nhân
                 </div>
                 <div class="info-line">
                     <div class="subtitle ">Giới tính: </div>
-                    <input class="edit__input ms-3" id="gender" type="text" value="{{p.gender}}">
+                    <input class="edit__input ms-3" id="gender" name="gender" type="text" value="{{p.gender}}" [(ngModel)]="profile['gender']">
                 </div>
                 <div class="info-line">
                     <div class="subtitle">Ngày sinh: </div>
@@ -151,22 +156,24 @@
                 </div>
                 <div class="info-line">
                     <div class="subtitle">Đã học tại: </div>
-                    <input class="edit__input ms-3" type="text" id="oldschool" n>
+                    <input class="edit__input ms-3" type="text" id="wentTo" name="wentTo" [(ngModel)]="profile['wentTo']" >
                 </div>
                 <div class="info-line">
                     <div class="subtitle"> Sinh viên trường: </div>
-                    <input class="edit__input ms-3" type="text" id="school" >
+                    <input class="edit__input ms-3" type="text" id="education" >
                 </div>
                 <div class="info-line">
                     <div class="subtitle "> Chuyên ngành: </div>
                     <input class="edit__input ms-3" type="text" id="major" >
                 </div>
                 <div class="save-button">
-                    <button class="saveInfo mt-3" >Lưu</button>
+                    <button type="submit" class="saveInfo mt-3" onsubmit="SubmitProfile()"  >Lưu</button>
                 </div>
                     
             </div>
-        </div>
+        
+    </form>
     </div>
+
 
 

@@ -1,6 +1,7 @@
 import { ProfileService } from './../services/profile.service';
 import { Component, OnInit } from '@angular/core';
 import { Profile } from '../models/profile';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-tutor-profile',
@@ -25,10 +26,44 @@ export class TutorProfileComponent implements OnInit {
     })
    }
 
-   openEditProfile(){
+   openEditProfile(data: Profile){
     this.open=!this.open
+    this.profile =data;
  }
  closeEdit(){
   this.open=!this.open
  }
+ // Save
+submitData(form: NgForm){
+
+  if(this.profile._id==""){
+    this._service.postProfile(this.profile).subscribe(res =>{
+      let resData=JSON.parse(JSON.stringify(res));
+      if(resData.message ==="success"){
+        // alert("Success");
+        this.getProfiles();
+
+      }else{alert("Failed")
+    } 
+    })
+  } else{
+    this._service.updateProfile(this.profile._id,this.profile).subscribe(res =>{
+      let resData=JSON.parse(JSON.stringify(res));
+      if(resData.message ==="success"){
+        //alert("Updated Successfully");
+        this.getProfiles();
+
+      }else alert("Failed")
+    })
+  }
+  }
+  edit(data: Profile){
+    console.log(data);
+    this.profile =data
+  }
+  onReset(form?:NgForm){
+    if(form)
+    form.reset();
+    this.profile=new Profile();
+  }
 }
