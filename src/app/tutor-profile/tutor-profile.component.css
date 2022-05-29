@@ -1,0 +1,119 @@
+.profile-container{
+    font-size: 1.3vh;
+  
+}
+.cover-image{
+    margin: 0 auto;
+    width: 80%;
+    display: block;
+    height: 15rem;
+   
+}
+.cover-button{
+text-align: right;
+margin-top: -3rem;
+margin-right: 12rem;
+margin-bottom: 2rem;
+font-size: 1rem;
+}
+.avatar-image{
+    border-radius: 50%;
+    height: 8rem;
+    width: 8rem;
+    margin-left: 12rem;
+    margin-top: -4rem;
+}
+.user-info{
+    display: flex;
+}
+.avatar-button{
+   margin-top: -2rem;
+   margin-left: 18rem;
+}
+.btn-avatar{
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    width: 3rem;
+    font-size: 1.5rem;
+}
+.user-name{
+    margin-left: 1rem;
+    
+}
+.user-container{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 80%;
+    font-size: 1rem;
+}
+.user-container-above{
+    display: flex;
+}
+.user__item--intro{
+    flex-basis: 40%;
+    border: 1px solid black ;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+.sub-title{
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: #0077C0;
+    border-radius: 1rem;
+    margin: 0.5rem 0;
+    padding: 0.4rem;
+}
+
+.info-line{
+    display: flex;
+    margin-top: 0.5rem;
+}
+.edit-button{
+    margin-top: 1rem;
+    text-align: right;
+}
+.btn-edit{
+    padding: 0.1rem 2rem;
+}
+.user__item--exp{
+    flex-basis: 60%;
+    border: 1px solid black ;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-left: 3rem;
+}
+.user__item--class{
+    border: 1px solid black ;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+@media only screen and (max-width: 1023px) {
+    .user-container-above{
+        flex-direction: column;
+    }
+    .user__item--exp{
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+    .cover-button{
+  
+        margin-top: -3rem;
+        margin-right: 4rem;
+        margin-bottom: 3rem;
+        font-size: 0.5rem;
+        }
+
+  }
+  @media only screen and (max-width: 600px) {
+    .user-info{
+        flex-direction: column;
+    }
+    .user-name{
+        text-align: center;
+    }
+  }
