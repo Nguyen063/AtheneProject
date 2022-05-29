@@ -16,7 +16,7 @@ export class ProfileService {
   constructor(private _http: HttpClient, private _service: ProfileService) { }
   ngOnInit(): void {
    
-    this.getProfiles()
+    // this.getProfiles()
   }
   getProfiles(): Observable<Profile[]>{
     return this._http.get<Profile[]>(`${baseUrl}/profiles`).pipe(
@@ -33,11 +33,11 @@ export class ProfileService {
   handleError(error:HttpErrorResponse){
     return throwError(()=>{new Error(error.message)})
   }
-  postProfile(data: Profile){
-    return this._http.post(`${baseUrl}/profile`,data);
-  }
-  updateProfile(id:any,data:any){
-    return this._http.patch(`${baseUrl}/${id}`,data)
-  }
+  // postProfile(data: Profile){
+  //   return this._http.post(`${baseUrl}/profile`,data);
+  // }
+  // updateProfile(id:any,data:any){
+  //   return this._http.patch(`${baseUrl}/${id}`,data)
+  // }
 
 }
