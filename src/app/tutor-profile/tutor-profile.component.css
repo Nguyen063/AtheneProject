@@ -101,13 +101,20 @@ font-size: 1rem;
         margin-left: 0;
     }
     .cover-button{
-  
         margin-top: -3rem;
-        margin-right: 4rem;
+        margin-right: 7rem;
         margin-bottom: 3rem;
         font-size: 0.5rem;
         }
 
+  }
+  @media only screen and (max-width: 600px){
+    .cover-button{
+        margin-top: -3rem;
+        margin-right: 3.5rem;
+        margin-bottom: 3rem;
+        font-size: 0.5rem;
+        }
   }
   @media only screen and (max-width: 600px) {
     .user-info{
@@ -116,4 +123,5 @@ font-size: 1rem;
     .user-name{
         text-align: center;
     }
+   
   }
