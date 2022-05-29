@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
 // Pop up
 openlogin:boolean= true;
 opensignup:boolean= true;
+closeHeader:boolean= true;
 
 // Check validator
 public formUpload=this._formBuilder.group({phone:['',[Validators.required, Validators.maxLength(10), Validators.minLength(10), Validators.pattern(/((09|03|07|08|05)+[0-9]{8}\b)/g)]]},{pw:['',[Validators.required]]} )
@@ -41,5 +42,9 @@ openSignup(){
 closeSignup(){
   this.opensignup=!this.opensignup
 }
+openHeader(){
+  this.closeHeader=!this.closeHeader
+}
+
 
 }

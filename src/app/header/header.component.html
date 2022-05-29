@@ -12,9 +12,11 @@
         <a class="nav-link" routerLink="/fortutor" routerLinkActive="active">Trở thành gia sư</a>
         <a class="nav-link" routerLink="/blog" routerLinkActive="active">Blog</a>
         <a class="nav-link" routerLink="/intropage" routerLinkActive="active">Giới thiệu</a>
-        <a class="icon" onclick="myFunction()">
+        <a class="icon" (click)="openHeader()">
             <i class="fa fa-bars"></i>
         </a>
+ 
+
     </div>
     <!--Item right-->
     <div class="header__item--right">
@@ -64,3 +66,14 @@
             </div>
       </div>
     </div>
+</div>
+</div>
+    <div class=" header__item--middle-responsive " [class.d-none]="closeHeader">
+        <a class="nav-link" routerLink="/" routerLinkActive="active">Trang chủ</a>
+        <a class="nav-link" routerLink="/forlearner" routerLinkActive="active">Tìm gia sư</a>
+        <a class="nav-link" routerLink="/fortutor" routerLinkActive="active">Trở thành gia sư</a>
+        <a class="nav-link" routerLink="/blog" routerLinkActive="active">Blog</a>
+        <a class="nav-link" routerLink="/intropage" routerLinkActive="active">Giới thiệu</a>
+    </div>
+   
+
