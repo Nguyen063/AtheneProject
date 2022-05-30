@@ -207,7 +207,7 @@
 
 @media screen and (max-width: 800px) {
     *{
-        font-size: 2vw;
+        font-size: 13px;
     }
     #us-photo {
         margin: 10px 5px;
