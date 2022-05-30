@@ -10,6 +10,8 @@ export class ForlearnerComponent implements OnInit {
 
   learners:any;
   errMessage: string="" ;
+  confirm:boolean=true;
+  close:boolean=true;
 
   constructor(private _service: ForlearnerService) { }
 
@@ -24,6 +26,13 @@ export class ForlearnerComponent implements OnInit {
       error : err=> this.errMessage=err
     })
    }
-  
+   openConfirm(){
+    this.confirm=!this.confirm
+  }
+  clickYes(){
+    alert("Bạn đã gửi yêu cầu thành công");
+    this.confirm=!this.confirm
+ 
+  }
 }
 

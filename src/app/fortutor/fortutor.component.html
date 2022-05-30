@@ -130,7 +130,7 @@
 
         </div>
         <div class="profile__item--below pb-3 ">
-            <button class="profile__button text-white " onclick="dangKy() ">Đăng ký nhận lớp</button>
+            <button class="profile__button text-white " (click)="openConfirm()">Đăng ký nhận lớp</button>
 
         </div>
     </div>
@@ -147,3 +147,15 @@
 
 
 </div> -->
+<div id="myConfirmation" class="confirmation" [class.d-none]="confirm"> 
+    <div class="confirmation-content"> 
+    <span (click)="openConfirm()" class="close">&times;</span> 
+    <p>Bạn chắc chắn muốn gửi yêu cầu tạo lớp tới gia sư này?</p> 
+    <div class="confirm-container"> 
+    <button id="btn-yes" (click)="clickYes()" class="confirm-btn">Có</button> 
+    <button (click)="openConfirm()" class="confirm-btn">Không</button> 
+    </div>  
+</div>  
+</div> 
+    
+  

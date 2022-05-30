@@ -1,4 +1,3 @@
-
 <div class="profile-container" *ngFor="let p of profiles">
     <!-- Cover image -->
     <div>
@@ -14,135 +13,135 @@
                 <button class="btn-avatar" type="file"><i class='bi bi-camera-fill'></i> </button>
             </div>
         </div>
-       
-            <div class="user-name">
+
+        <div class="user-name">
             <h2>{{p.name}}</h2>
             <h6>{{p.followers}}</h6>
         </div>
     </div>
- <div class="user-container">
-     <div class="user-container-above">
-     <div class="user__item--intro">
-        <div class="sub-title">
-            Giới thiệu
-        </div>
-        <div class="text-center">{{p.bio}}</div>
-        <div class="sub-title">
-            Thông tin cá nhân
-        </div>
-        <div class="information">
-            <div class="info-line">
-                <div class="subtitle">Giới tính: </div>
-                <div class="ms-2"> {{p.gender}}</div>
+    <div class="user-container">
+        <div class="user-container-above">
+            <div class="user__item--intro">
+                <div class="sub-title">
+                    Giới thiệu
+                </div>
+                <div class="text-center">{{p.bio}}</div>
+                <div class="sub-title">
+                    Thông tin cá nhân
+                </div>
+                <div class="information">
+                    <div class="info-line">
+                        <div class="subtitle">Giới tính: </div>
+                        <div class="ms-2"> {{p.gender}}</div>
+                    </div>
+                    <div class="info-line">
+                        <div class="subtitle">Ngày sinh:</div>
+                        <div class="ms-2"> {{p.dob | date:"dd/MM/yyyy"}}</div>
+                    </div>
+                    <div class="info-line">
+                        <div class="subtitle"> Sinh viên trường: </div>
+                        <div class="ms-2"> {{p.education}}</div>
+                    </div>
+                    <div class="info-line">
+                        <div class="subtitle"> Chuyên ngành: </div>
+                        <div class="ms-2"> {{p.major}}</div>
+                    </div>
+                    <div class="info-line">
+                        <div class="subtitle">Đã học tại: </div>
+                        <div class="ms-2"> {{p.wentTo}}</div>
+                    </div>
+                    <div class="edit-button">
+                        <button class="btn-edit" (click)="openEditProfile(p)">Chỉnh sửa</button>
+                    </div>
+                </div>
+
             </div>
-            <div class="info-line">
-                <div class="subtitle">Ngày sinh:</div>
-                <div class="ms-2"> {{p.dob | date:"dd/MM/yyyy"}}</div>
-            </div>
-            <div class="info-line">
-                <div class="subtitle"> Sinh viên trường: </div>
-                <div class="ms-2"> {{p.education}}</div>
-            </div>
-            <div class="info-line">
-                <div class="subtitle"> Chuyên ngành: </div>
-                <div class="ms-2"> {{p.major}}</div>
-            </div>
-            <div class="info-line">
-                <div class="subtitle">Đã học tại: </div>
-                <div class="ms-2"> {{p.wentTo}}</div>
-            </div>
-            <div class="edit-button">
-                <button class="btn-edit" (click)="openEditProfile(p)">Chỉnh sửa</button>
+            <div class="user__item--exp">
+                <div class="sub-title">
+                    Kinh nghiệm làm việc
+                </div>
+                <div class="info-line">
+                    Exp1
+                </div>
+                <div class="ms-2"> {{p.Exps.exp1}}</div>
+                <div class="info-line">
+                    Exp2
+                </div>
+                <!-- Achievement -->
+
+                <div class="sub-title">
+                    Thành tích đạt được
+                </div>
+                <div class="info-line">
+                    Achievements1
+                </div>
+                <div class="info-line">
+                    Achievements2
+                </div>
+                <div class="info-line">
+                    Achievements3
+                </div>
+                <div class="edit-button">
+                    <button class="btn-edit">Chỉnh sửa</button>
+                </div>
             </div>
         </div>
 
-     </div>
-     <div class="user__item--exp">
-        <div class="sub-title">
-            Kinh nghiệm làm việc
-        </div>
-        <div class="info-line">
-            Exp1
-        </div>
-        <div class="ms-2"> {{p.Exps.exp1}}</div>
-        <div class="info-line">
-            Exp2
-        </div>
-        <!-- Achievement -->
+        <div class="user__item--class">
+            <!-- Register class -->
+            <div class="content__item--class">
+                <div class="sub-title">
+                    Lớp đang đăng kí
+                </div>
+                <div class="info-line">
+                    <div class="subtitle">Cấp dạy: </div>
+                    <div class="ms-2"> {{p.class}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="subtitle">Môn dạy: </div>
+                    <div class="ms-2"> {{p.subject}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="subtitle">Giới tính học viên: </div>
+                    <div class="ms-2"> {{p.learnerGender}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="subtitle">Địa điểm dạy: </div>
+                    <div class="ms-2"> {{p.teachingLocation}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="subtitle">Thời gian dạy: </div>
+                    <div class="ms-2"> {{p.teachingTime}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="subtitle">Mức lương mong muốn: </div>
 
-        <div class="sub-title">
-            Thành tích đạt được
-        </div>
-        <div class="info-line">
-            Achievements1
-        </div>
-        <div class="info-line">
-            Achievements2
-        </div>
-        <div class="info-line">
-            Achievements3
-        </div>
-        <div class="edit-button">
-            <button class="btn-edit" >Chỉnh sửa</button>
-        </div>
-     </div>
-    </div>
+                </div>
+                <div class="info-line">
+                    <div class="subtitle"> Lịch học dự kiến: </div>
+                    <div class="ms-2"> {{p.timeTable}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="subtitle"> Mô tả thêm: </div>
+                    <div class="ms-2"> {{p.more}}</div>
 
-     <div class="user__item--class">
-         <!-- Register class -->
-        <div class="content__item--class">
-            <div class="sub-title">
-                Lớp đang đăng kí
+                </div>
+                <div class="edit-button">
+                    <button class="btn-edit">Chỉnh sửa</button>
+                </div>
             </div>
-            <div class="info-line">
-                <div class="subtitle">Cấp dạy: </div>
-                <div class="ms-2"> {{p.class}}</div>
-            </div>
-            <div class="info-line">
-                <div class="subtitle">Môn dạy: </div>
-                <div class="ms-2"> {{p.subject}}</div>
-            </div>
-            <div class="info-line">
-                <div class="subtitle">Giới tính học viên: </div>
-                <div class="ms-2"> {{p.learnerGender}}</div>
-            </div>
-            <div class="info-line">
-                <div class="subtitle">Địa điểm dạy: </div>
-                <div class="ms-2"> {{p.teachingLocation}}</div>
-            </div>
-            <div class="info-line">
-                <div class="subtitle">Thời gian dạy: </div>
-                <div class="ms-2"> {{p.teachingTime}}</div>
-            </div>
-            <div class="info-line">
-                <div class="subtitle">Mức lương mong muốn: </div>
 
-            </div>
-            <div class="info-line">
-                <div class="subtitle"> Lịch học dự kiến: </div>
-                <div class="ms-2"> {{p.timeTable}}</div>
-            </div>
-            <div class="info-line">
-                <div class="subtitle"> Mô tả thêm: </div>
-                <div class="ms-2"> {{p.more}}</div>
-               
-     </div>
-     <div class="edit-button">
-        <button class="btn-edit" >Chỉnh sửa</button>
-    </div>
- </div>
-   
-</div>
+        </div>
 
-<!-- Pop up -->
-     <!-- Pop up to edit profile -->
+        <!-- Pop up -->
+        <!-- Pop up to edit profile -->
         <!--  Edit Pop-up -->
         <!-- <div id="myProfile" class="profile-edit" [class.d-none]="open">
             <form #productForm="ngForm" (ngSubmit)="submitData(productForm)"> -->
-                <!-- ID -->
-                <!-- <input type="hidden" class="form-control" name="_id"  [(ngModel)]="profile['_id']"> -->
-                <!-- Info -->
-            <!-- <div class="edit-content"> <span class="close" (click)="closeEdit()">&times;</span>
+        <!-- ID -->
+        <!-- <input type="hidden" class="form-control" name="_id"  [(ngModel)]="profile['_id']"> -->
+        <!-- Info -->
+        <!-- <div class="edit-content"> <span class="close" (click)="closeEdit()">&times;</span>
                 <div class=" edit-title">
                     Thông tin cá nhân
                 </div>
@@ -174,6 +173,3 @@
         
     </form>
     </div> -->
-
-
-

@@ -7,101 +7,103 @@
         <hr>
     </div>
     <!-- Row1 -->
-    <div class="row">
-        <div class="col-6">
-            <input class="input--1" type="text" id="" placeholder="Họ và tên lót">
+    <form #TutorForm="ngForm">
+        <div class="row">
+            <div class="col-6">
+                <input class="input--1" type="text" id="name" name="name" placeholder="Họ và tên lót">
+            </div>
+            <div class="col-6">
+                <input class="input--1" type="text" id="" placeholder="Tên">
+            </div>
         </div>
-        <div class="col-6">
-            <input class="input--1" type="text" id="" placeholder="Tên">
+        <!-- Row2 -->
+        <div class="row">
+            <div class="col-12">
+                <input class="input--1" type="text" id="" placeholder="Số điện thoại (bắt buộc)">
+            </div>
         </div>
-    </div>
-    <!-- Row2 -->
-    <div class="row">
-        <div class="col-12">
-            <input class="input--1" type="text" id="" placeholder="Số điện thoại (bắt buộc)">
+        <!-- Row3-->
+        <div class="row">
+            <label>Ngày sinh của bạn</label>
+            <div class="col-12">
+                <input class="input--1" type="text" id="" placeholder="">
+            </div>
         </div>
-    </div>
-    <!-- Row3-->
-    <div class="row">
-        <label>Ngày sinh của bạn</label>
-        <div class="col-12">
-            <input class="input--1" type="text" id="" placeholder="">
+        <!-- Row4 -->
+        <div class="row">
+            <div class="col-2">
+                <label>Giới tính</label>
+            </div>
+            <div class="col-3"><input type="radio" id="html" name="Gender" value="Nam"> <label for="gender"> &nbsp; Nam</label> </div>
+            <div class="col-3"><input type="radio" id="html" name="Gender" value="Nu"> <label for="gender"> &nbsp; Nữ</label> </div>
         </div>
-    </div>
-    <!-- Row4 -->
-    <div class="row">
-        <div class="col-2">
-            <label>Giới tính</label>
+        <!-- Row5 -->
+        <div class="row">
+            <div class="col-2">
+                <label class="align-middle">Địa chỉ</label>
+            </div>
+            <div class="col-4">
+                <input class="input--1" type="text" id="" placeholder="Số nhà">
+            </div>
+            <div class="col-6">
+                <input class="input--1" type="text" id="" placeholder="Đường">
+            </div>
         </div>
-        <div class="col-3"><input type="radio" id="html" name="Gender" value="Nam"> <label for="gender"> &nbsp; Nam</label> </div>
-        <div class="col-3"><input type="radio" id="html" name="Gender" value="Nu"> <label for="gender"> &nbsp; Nữ</label> </div>
-    </div>
-    <!-- Row5 -->
-    <div class="row">
-        <div class="col-2">
-            <label class="align-middle">Địa chỉ</label>
+        <!-- ROW 6 -->
+        <div class="row">
+            <div class="col-4">
+                <input class="input--1" type="text" id="" placeholder="Phường">
+            </div>
+            <div class="col-4">
+                <input class="input--1" type="text" id="" placeholder="Quận/huyện">
+            </div>
+            <div class="col-4">
+                <input class="input--1" type="text" id="" placeholder="Tỉnh/Thành phố">
+            </div>
         </div>
-        <div class="col-4">
-            <input class="input--1" type="text" id="" placeholder="Số nhà">
+        <!-- ROW 7 -->
+        <div class="row">
+            <div class="col-2">
+                <label class="align-middle">Số CCCD</label>
+            </div>
+            <div class="col-10">
+                <input class="input--1" type="text" id="" placeholder="Số nhà">
+            </div>
         </div>
-        <div class="col-6">
-            <input class="input--1" type="text" id="" placeholder="Đường">
+        <!-- ROW 8 -->
+        <div class="row">
+            <div class="col-2">
+                <label class="align-middle">Ngày cấp</label>
+            </div>
+            <div class="col-10">
+                <input class="input--1" type="text" id="" placeholder="Số nhà">
+            </div>
         </div>
-    </div>
-    <!-- ROW 6 -->
-    <div class="row">
-        <div class="col-4">
-            <input class="input--1" type="text" id="" placeholder="Phường">
+        <div class="row">
+            <div class="col-12">
+                <input class="input--1" type="text" id="" placeholder="Sinh viên/Cựu sinh viên trường">
+            </div>
         </div>
-        <div class="col-4">
-            <input class="input--1" type="text" id="" placeholder="Quận/huyện">
+        <div class="row">
+            <div class="col-12">
+                <input class="input--1" type="text" id="" placeholder="Chuyên ngành">
+            </div>
         </div>
-        <div class="col-4">
-            <input class="input--1" type="text" id="" placeholder="Tỉnh/Thành phố">
+        <div class="row">
+            <div class="col-12">
+                <input class="input--1" type="text" id="" placeholder="Kinh nghiệm">
+            </div>
         </div>
-    </div>
-    <!-- ROW 7 -->
-    <div class="row">
-        <div class="col-2">
-            <label class="align-middle">Số CCCD</label>
+        <div class="row">
+            <div class="col-12">
+                <input class="input--1" type="text" id="" placeholder="Bằng cấp khác">
+            </div>
         </div>
-        <div class="col-10">
-            <input class="input--1" type="text" id="" placeholder="Số nhà">
+        <div class="row button_container">
+            <button> Quay lại</button>
+            <button type="submit"> Tiếp theo</button>
         </div>
-    </div>
-    <!-- ROW 8 -->
-    <div class="row">
-        <div class="col-2">
-            <label class="align-middle">Ngày cấp</label>
-        </div>
-        <div class="col-10">
-            <input class="input--1" type="text" id="" placeholder="Số nhà">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <input class="input--1" type="text" id="" placeholder="Sinh viên/Cựu sinh viên trường">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <input class="input--1" type="text" id="" placeholder="Chuyên ngành">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <input class="input--1" type="text" id="" placeholder="Kinh nghiệm">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <input class="input--1" type="text" id="" placeholder="Bằng cấp khác">
-        </div>
-    </div>
-    <div class="row button_container">
-        <button> Quay lại</button>
-        <button> Tiếp theo</button>
-    </div>
+    </form>
     <br/>
     <br/>
 </div>
