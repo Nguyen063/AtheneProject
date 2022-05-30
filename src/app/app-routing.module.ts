@@ -9,6 +9,9 @@ import { IntropageComponent } from './intropage/intropage.component';
 import { ShowProfileComponent } from './show-profile/show-profile.component';
 import { TutorProfileComponent } from './tutor-profile/tutor-profile.component';
 import { ContentAtheneComponent } from './content-athene/content-athene.component';
+import { FormFindLearnerComponent } from './form-find-learner/form-find-learner.component';
+import { FormLearnerComponent } from './form-learner/form-learner.component';
+import { FormFindTutorComponent } from './form-find-tutor/form-find-tutor.component';
 
 
 
@@ -22,7 +25,10 @@ const routes: Routes = [
   { path: 'intropage', component: IntropageComponent },
   { path: 'tutorprofile', component: TutorProfileComponent },
   { path: 'showprofile', component: ShowProfileComponent },
-  { path: 'homapage/:id', component: ContentAtheneComponent }
+  { path: 'homapage/:id', component: ContentAtheneComponent },
+  { path: 'form-find-learner', component: FormFindLearnerComponent },
+  { path: 'form-find-tutor', component: FormFindTutorComponent },
+  { path: 'form-learner', component: FormLearnerComponent }
 
 ];
 

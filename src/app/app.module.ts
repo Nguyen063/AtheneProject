@@ -20,6 +20,8 @@ import { ForlearnerComponent } from './forlearner/forlearner.component';
 import { ContentAtheneComponent } from './content-athene/content-athene.component';
 import { FormTutorComponent } from './form-tutor/form-tutor.component';
 import { FormLearnerComponent } from './form-learner/form-learner.component';
+import { FormFindLearnerComponent } from './form-find-learner/form-find-learner.component';
+import { FormFindTutorComponent } from './form-find-tutor/form-find-tutor.component';
 
 
 
@@ -40,7 +42,9 @@ import { FormLearnerComponent } from './form-learner/form-learner.component';
     ForlearnerComponent,
     ContentAtheneComponent,
     FormTutorComponent,
-    FormLearnerComponent
+    FormLearnerComponent,
+    FormFindLearnerComponent,
+    FormFindTutorComponent
   ],
   imports: [
     BrowserModule,
