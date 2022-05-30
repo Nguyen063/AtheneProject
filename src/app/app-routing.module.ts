@@ -13,6 +13,7 @@ import { FormFindLearnerComponent } from './form-find-learner/form-find-learner.
 import { FormLearnerComponent } from './form-learner/form-learner.component';
 import { FormFindTutorComponent } from './form-find-tutor/form-find-tutor.component';
 import { TutorProfileComponent } from './tutor-profile/tutor-profile.component';
+import { FormTutorComponent } from './form-tutor/form-tutor.component';
 
 
 
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: 'homapage/:id', component: ContentAtheneComponent },
   { path: 'form-find-learner', component: FormFindLearnerComponent },
   { path: 'form-find-tutor', component: FormFindTutorComponent },
-  { path: 'form-learner', component: FormLearnerComponent }
+  { path: 'form-learner', component: FormLearnerComponent },
+  { path: 'form-tutor', component: FormTutorComponent }
  
 ];
 
