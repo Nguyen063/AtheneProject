@@ -1,9 +1,9 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { catchError, Observable, retry, throwError } from 'rxjs';
 import { Profile } from '../models/profile';
-import { Tutor } from '../models/tutor'
+import { Tutor } from '../models/tutor';
+
 
 const baseUrl="http://localhost:3000"
 @Injectable({
@@ -33,11 +33,4 @@ export class ProfileService {
   handleError(error:HttpErrorResponse){
     return throwError(()=>{new Error(error.message)})
   }
-  // postProfile(data: Profile){
-  //   return this._http.post(`${baseUrl}/profile`,data);
-  // }
-  // updateProfile(id:any,data:any){
-  //   return this._http.patch(`${baseUrl}/${id}`,data)
-  // }
-
 }

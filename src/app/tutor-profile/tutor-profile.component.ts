@@ -1,7 +1,6 @@
 import { ProfileService } from './../services/profile.service';
+import { Profile } from './../models/profile';
 import { Component, OnInit } from '@angular/core';
-import { Profile } from '../models/profile';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-tutor-profile',
@@ -9,14 +8,25 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./tutor-profile.component.css']
 })
 export class TutorProfileComponent implements OnInit {
-  profile: Profile= new Profile();
+  profile: Profile = new Profile();
   profiles:any;
-  errMessage: string="" ;
-  open:boolean= true;
+  errMessage: string="";
+  open:boolean=true;
 
-  constructor(private _service:ProfileService) { }
+  constructor(private _service: ProfileService) { }
 
   ngOnInit(): void {
   }
-
+  getProfiles(){
+    this._service.getProfiles().subscribe({
+      next:data => this.profiles=data,
+      error :err => this.errMessage=err
+    })
+  }
+  openEditProfile(){
+    this.open=!this.open
+  }
+  closeEdit(){
+    this.open=!this.open
+  }
 }
