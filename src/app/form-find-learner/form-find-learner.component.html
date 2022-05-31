@@ -6,13 +6,13 @@
         </div>
         <hr/>
         <!-- row 1 -->
-        <div class="row level row">
+        <div class="row level ">
             <div class="col-3">
                 <label>Cấp học:</label>
             </div>
-            <div class="col-3" *ngFor="let level of Levels; let i=index">
-                <div>
-                    <input type="checkbox" [value]="level.value" (change)="onCheckboxChange($event)"><label>&nbsp; {{level.name}}</label>
+            <div class="col-9" style="display: flex">
+                <div class="caphoc" *ngFor="let level of Levels; let i=index">
+                        <input type="checkbox" [value]="level.value" (change)="onCheckboxChange($event)"><label>&nbsp; {{level.name}}</label>
                 </div>
             </div>
             <div>
@@ -22,8 +22,7 @@
 
         </div>
         <!-- row 2 -->
-        <div class="row level row">
-            <div class="row">
+        <div class="row level ">
                 <div class="col-3">
                     <label for="subject">Môn dạy:</label>
                 </div>
@@ -33,18 +32,17 @@
                         <small class="text-danger" *ngIf="form.controls['subject'].errors?.['required']">*Môn học không được để trống</small>
                     </div>
                 </div>
-
-            </div>
-
         </div>
         <!-- row 3 -->
-        <div class="row gender row">
+        <div class="row ">
             <div class="col-3">
                 <label>Giới tính: </label>
             </div>
-            <div class="col-4" *ngFor="let g of Gender; let i=index">
-                <div>
-                    <input type="checkbox" [value]="g.value" (change)="onCheckboxChange1($event)"><label>&nbsp; {{g.name}}</label>
+            <div class="col-9" style="display: flex">
+                <div class="gioitinh" *ngFor="let g of Gender; let i=index">
+                    <div>
+                        <input type="checkbox" [value]="g.value" (change)="onCheckboxChange1($event)"><label>&nbsp; {{g.name}}</label>
+                    </div>
                 </div>
             </div>
             <small class="error text-danger" *ngIf="this.form.controls['checkArray1'].errors?.['required']">*Vui lòng chọn giới tính.</small>
