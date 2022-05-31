@@ -50,7 +50,7 @@ import { FormFindTutorComponent } from './form-find-tutor/form-find-tutor.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule, 
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
@@ -59,8 +59,8 @@ import { FormFindTutorComponent } from './form-find-tutor/form-find-tutor.compon
       progressAnimation:"increasing",
       preventDuplicates: true
 
-    })
-    
+    }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
