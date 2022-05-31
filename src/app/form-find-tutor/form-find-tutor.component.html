@@ -7,9 +7,10 @@
         <hr/>
         <!-- row 1 -->
         <div class="form-line level row">
-           
+            <label for="jobs">Nghề nghiệp: </label>
             <div class="col-md-4" *ngFor="let profession of Profession; let i=index">
                 <div>
+
                     <input type="checkbox" [value]="profession.value" (change)="onCheckboxChange($event)"> {{profession.name}}
                 </div>
             </div>
@@ -19,24 +20,25 @@
         <!-- row 2 -->
         <div>
             <div class="form-line flex-item form-group">
-            <!-- Lớp dạy -->
+                <!-- Lớp dạy -->
                 <label class="lb-title" for="grade">Lớp dạy:</label>
-            <input class="ipbox" formControlName="grade" type="text" name="grade" id="grade" [class.is-invalid]="form.controls['grade'].invalid && form.controls['grade'].touched">
-            <div *ngIf="form.controls['grade'].invalid && form.controls['grade'].touched">
-                <small class="text-danger" *ngIf="form.controls['grade'].errors?.['required']">Lớp học không được để trống</small>
+                <input class="ipbox" formControlName="grade" type="text" name="grade" id="grade" [class.is-invalid]="form.controls['grade'].invalid && form.controls['grade'].touched">
+                <div *ngIf="form.controls['grade'].invalid && form.controls['grade'].touched">
+                    <small class="text-danger" *ngIf="form.controls['grade'].errors?.['required']">Lớp học không được để trống</small>
+                </div>
+
+                <!-- Môn dạy -->
+                <label class="lb-title" for="subject">Môn dạy:</label>
+                <input class="ipbox " formControlName="subject" type="text" name="subject" id="subject" [class.is-invalid]="form.controls['subject'].invalid && form.controls['subject'].touched">
+                <div *ngIf="form.controls['subject'].invalid && form.controls['subject'].touched">
+                    <small class="text-danger" *ngIf="form.controls['subject'].errors?.['required']">Môn học không được để trống</small>
+                </div>
+
             </div>
-            
-            <!-- Môn dạy -->
-            <label class="lb-title" for="subject">Môn dạy:</label>
-            <input class="ipbox " formControlName="subject" type="text" name="subject" id="subject" [class.is-invalid]="form.controls['subject'].invalid && form.controls['subject'].touched">
-            <div *ngIf="form.controls['subject'].invalid && form.controls['subject'].touched">
-                <small class="text-danger" *ngIf="form.controls['subject'].errors?.['required']">Môn học không được để trống</small>
-            </div>
-        
         </div>
-    </div>
         <!-- row 3 -->
         <div class="form-line gender row">
+            <label for="gender">Giới tính: </label>
             <div class="col-md-6" *ngFor="let g of Gender; let i=index">
                 <div>
                     <input type="checkbox" [value]="g.value" (change)="onCheckboxChange1($event)"> {{g.name}}
@@ -45,7 +47,7 @@
             <small class="error text-danger" *ngIf="this.form.controls['checkArray1'].errors?.['required']">Checkbox is required, select atleast one value.</small>
         </div>
 
-    <!-- row 4 -->
+        <!-- row 4 -->
         <div class="form-line flex-item form-group">
             <label class="lb-title" for="khuvuc">Địa điểm dạy:</label>
             <!-- Số nhà -->
@@ -54,32 +56,32 @@
                 <small class="text-danger" *ngIf="form.controls['sonha'].errors?.['required']">Số nhà không được để trống</small>
             </div>
             <!-- Đường -->
-            <input class="ipbox" type="text" id="duong" name="duong" placeholder="Đường" [class.is-invalid]="form.controls['duong'].invalid && form.controls['duong'].touched">
+            <input class="ipbox" formControlName="duong" type="text" id="duong" name="duong" placeholder="Đường" [class.is-invalid]="form.controls['duong'].invalid && form.controls['duong'].touched">
             <div *ngIf="form.controls['duong'].invalid && form.controls['duong'].touched">
                 <small class="text-danger" *ngIf="form.controls['duong'].errors?.['required']">Tên đường không được để trống</small>
             </div>
         </div>
-    <!-- row 5: Phường, Quận/ Huyện, TP -->
-    <div class="form-line flex-item form-group">
-        <!-- Phường -->
-        <input class="ipbox" type="text" id="phuong" name="phuong" placeholder="Phường" [class.is-invalid]="form.controls['phuong'].invalid && form.controls['phuong'].touched">
+        <!-- row 5: Phường, Quận/ Huyện, TP -->
+        <div class="form-line flex-item form-group">
+            <!-- Phường -->
+            <input class="ipbox" formControlName="phuong" type="text" id="phuong" name="phuong" placeholder="Phường" [class.is-invalid]="form.controls['phuong'].invalid && form.controls['phuong'].touched">
             <div *ngIf="form.controls['phuong'].invalid && form.controls['phuong'].touched">
                 <small class="text-danger" *ngIf="form.controls['phuong'].errors?.['required']">Tên phường không được để trống</small>
             </div>
-        <!-- Quận/Huyện -->
-        <input class="ipbox" type="text" id="quan" name="quan" placeholder="Quận/Huyện" [class.is-invalid]="form.controls['quan'].invalid && form.controls['quan'].touched">
+            <!-- Quận/Huyện -->
+            <input class="ipbox" type="text" formControlName="quan" id="quan" name="quan" placeholder="Quận/Huyện" [class.is-invalid]="form.controls['quan'].invalid && form.controls['quan'].touched">
             <div *ngIf="form.controls['quan'].invalid && form.controls['quan'].touched">
                 <small class="text-danger" *ngIf="form.controls['quan'].errors?.['required']">Tên quận không được để trống</small>
             </div>
-        <!-- TP.HCM -->
-        <input class="ipbox" type="text" id="thanhpho" name="address" placeholder="TP. Hồ Chí Minh" readonly>
-    </div>
-    <!-- row 6 -->
-    <div class="form-line flex-item form-group">
-        <label class="lb-title" for="kinhnghiem">Kinh nghiệm:</label>
-        <input class="ipbox" type="text" id="kinhnghiem" name="kinhnghiem">
-    </div>
-    <!-- row 7 -->
+            <!-- TP.HCM -->
+            <input class="ipbox" type="text" id="thanhpho" name="address" placeholder="TP. Hồ Chí Minh" readonly>
+        </div>
+        <!-- row 6 -->
+        <div class="form-line flex-item form-group">
+            <label class="lb-title" for="kinhnghiem">Kinh nghiệm:</label>
+            <input class="ipbox" type="text" id="kinhnghiem" name="kinhnghiem">
+        </div>
+        <!-- row 7 -->
         <div class="form-line flex-item form-group">
             <label class="lb-title" for="time">Thời gian dạy:</label>
             <input class="ipbox " formControlName="time" type="text" name="time" id="time" placeholder="VD: 1h30 phút/1 buổi học" [class.is-invalid]="form.controls['time'].invalid && form.controls['time'].touched">

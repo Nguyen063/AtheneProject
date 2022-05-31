@@ -6,7 +6,7 @@
         </div>
         <hr/>
         <div class="form-line level row">
-            <!-- <label class="lb-title" for="subject">Cấp học:</label> -->
+            <label class="text-align" for="level">Cấp học:</label>
             <div class="col-md-4" *ngFor="let level of Levels; let i=index">
                 <div>
                     <input type="checkbox" [value]="level.value" (change)="onCheckboxChange($event)"> {{level.name}}
@@ -24,6 +24,7 @@
             </div>
         </div>
         <div class="form-line gender row">
+            <label for="gender">Giới tính: </label>
             <div class="col-md-6" *ngFor="let g of Gender; let i=index">
                 <div>
                     <input type="checkbox" [value]="g.value" (change)="onCheckboxChange1($event)"> {{g.name}}
