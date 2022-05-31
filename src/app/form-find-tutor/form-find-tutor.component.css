@@ -3,7 +3,7 @@ body {
 }
 
 .form-container {
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
     min-width: 350px;
     margin-top: 80px;
@@ -29,12 +29,6 @@ select.ipbox {
     height: 1.85rem;
 }
 
-#pass,
-#repass,
-#ho,
-#ten {
-    width: 48%;
-}
 
 .flex-item {
     display: flex;
@@ -55,30 +49,6 @@ select.ipbox {
     font-size: 12px;
     font-style: italic;
     display: none;
-}
-
-#phuong,
-#quan,
-#tp {
-    width: 30%;
-}
-#subject,
-#grade{
-    width: 33%;
-}
-#khuvuc,
-#thanhpho {
-    width: 35%;
-}
-
-#sonha,
-#duong {
-    width: 35%;
-}
-
-#sonhast,
-#duongst {
-    width: 35%;
 }
 
 .lb-title {
@@ -131,21 +101,6 @@ button,
     .flex-item,
     .txtbox {
         display: block;
-    }
-    #sonha,
-    #duong,
-    #phuong,
-    #tp,
-    #quan,
-    #pass,
-    #repass,
-    #ho,
-    #ten,
-    #khuvuc,
-    #thanhpho,
-    #sonhast,
-    #duongst {
-        width: 100%;
     }
     .flex-button {
         display: flex;
