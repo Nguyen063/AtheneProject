@@ -1,15 +1,15 @@
-.input--1 {
-    width: 100%;
+.ipbox {
+    border: solid black 1.7px;
+    margin-top: 10px;
+    height: 2.5rem;
     background-color: #D9F1F1;
-    height: 3rem;
-    margin: 0.5rem;
-    font-size: 1.3rem;
+    width: 100%;
 }
 
-label {
-    font-weight: bold;
-    margin: 0rem 0.5rem;
-    font-size: 1.2rem;
+.form-container {
+    width: 50%;
+    margin: 0 auto;
+    min-width: 350px;
 }
 
 h4 {
@@ -20,14 +20,21 @@ p {
     font-size: 1rem
 }
 
+label {
+    font-weight: bold;
+    margin: 0.5rem 0.5rem 0 0;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+
 .button_container {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
 button {
-    width: 20%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     border: none;
     background-color: rgb(255, 255, 255, 0);
     font-weight: 650;
@@ -35,4 +42,10 @@ button {
 
 button:hover {
     color: red;
+}
+
+::placeholder{
+    font-size: 15px;
+    color: black;
+    padding-left: 10px;
 }
