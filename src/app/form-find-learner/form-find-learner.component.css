@@ -2,113 +2,52 @@ body {
     font-family: 'Roboto';
 }
 
-.form-container {
-    
-    width: 40%;
-    margin: 0 auto;
-    min-width: 350px;
-    margin-top: 60px;
-}
-
-input {
-    padding: 0;
-}
-
-.form-line {
-    margin: 0.5rem 0;
-}
-
 .ipbox {
     border: solid black 1.7px;
     margin-top: 10px;
-    height: 2rem;
+    height: 2.5rem;
     background-color: #D9F1F1;
     width: 100%;
 }
-
-select.ipbox {
-    height: 1.85rem;
+.form-container {
+    width: 50%;
+    margin: 0 auto;
+    min-width: 350px;
 }
 
-#pass,
-#repass,
-#ho,
-#ten {
-    width: 48%;
+h4 {
+    font-weight: 800;
 }
 
-.flex-item {
-    display: flex;
-    justify-content: space-between;
-}
-
-#edit-item {
-    display: flex;
-}
-
-#phoneError,
-#phoneError1,
-#passError,
-#passError1,
-#cccdError,
-#cccdError1 {
-    color: red;
-    font-size: 12px;
-    font-style: italic;
-    display: none;
-}
-
-#phuong,
-#quan,
-#tp {
-    width: 30%;
-}
-
-#khuvuc,
-#thanhpho {
-    width: 35%;
-}
-
-#sonha,
-#duong {
-    width: 40%;
-}
-
-#sonhast,
-#duongst {
-    width: 35%;
-}
-
-.lb-title {
-    line-height: 1.5rem;
-    text-align: center;
-    margin-top: 10px;
+p {
+    font-size: 1rem
 }
 
 label {
-    font-weight: bolder;
-    text-align: left;
-    white-space: nowrap;
-    margin-right: 5px;
-}
-
-h2 {
-    margin-bottom: 10px;
-}
-
-a,
-.submit {
     font-weight: bold;
-    color: black;
-    text-decoration: none;
-    font-size: 1rem;
+    margin: 0.5rem 0.5rem 0 0;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+.button_container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+button {
+    font-size: 1.2rem;
+    border: none;
+    background-color: rgb(255, 255, 255, 0);
+    font-weight: 650;
+}
+button:hover {
+    color: red;
 }
 
-button,
-.submit {
-    border: none;
-    margin: 10px 0;
-    background: none;
+::placeholder{
+    font-size: 15px;
+    color: black;
+    padding-left: 10px;
 }
 
 .txt-info {
@@ -116,36 +55,6 @@ button,
     font-family: Roboto;
 }
 
-#luong::placeholder {
-    text-align: right;
-}
-
- ::placeholder {
-    color: black;
-    padding-left: 10px;
-}
-
-@media screen and (max-width:600px) {
-    .flex-item,
-    .txtbox {
-        display: block;
-    }
-    #sonha,
-    #duong,
-    #phuong,
-    #tp,
-    #quan,
-    #pass,
-    #repass,
-    #ho,
-    #ten,
-    #khuvuc,
-    #thanhpho,
-    #sonhast,
-    #duongst {
-        width: 100%;
-    }
-    .flex-button {
-        display: flex;
-    }
+select.ipbox {
+    height: 1.85rem;
 }

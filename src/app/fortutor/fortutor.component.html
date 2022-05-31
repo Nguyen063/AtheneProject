@@ -2,7 +2,7 @@
 <div class="filter-container">
     <div class="filter__item">
         <div class="mb-2 mt-3"><i class="bi bi-pencil-square filter-icon"></i>
-            <a class="nav-link" routerLink="/form-find-learner" routerLinkActive="active" > Đăng ký tìm học viên</a>
+            <a routerLink="/form-find-learner" routerLinkActive="active"> Đăng ký tìm học viên</a>
         </div>
         <div class="filter-spacingleft"><i class="bi bi-newspaper filter-icon"></i>
             <a href="http://localhost:3000/contract.pdf "> Hợp đồng gia sư</a>
@@ -56,7 +56,7 @@
             <option value="lop12">Lớp 12</option>
             <option value="luyenthidaihoc">Luyện thi đại học</option>
         </select>
-    </div>
+        </div>
     </div>
     <div class="filter__item ">
         <div class="filter-spacing "><select class="filter-selection " id="level " name="level ">
@@ -105,7 +105,7 @@
     </div>
 </div>
 <!-- Nội dung -->
-<div class="profile-container " >
+<div class="profile-container ">
     <div class="profile__item m-2 p-1 " *ngFor="let t of tutors ">
         <img class="avatar mt-3 " src="http://localhost:3000/{{t.LearnerInfo.Ava}} " alt="Lỗi ">
         <div class="profile__item--right ">
@@ -147,15 +147,13 @@
 
 
 </div> -->
-<div id="myConfirmation" class="confirmation" [class.d-none]="confirm"> 
-    <div class="confirmation-content"> 
-    <span (click)="openConfirm()" class="close">&times;</span> 
-    <p>Bạn chắc chắn muốn gửi yêu cầu tạo lớp tới gia sư này?</p> 
-    <div class="confirm-container"> 
-    <button id="btn-yes" (click)="clickYes()" class="confirm-btn">Có</button> 
-    <button (click)="openConfirm()" class="confirm-btn">Không</button> 
-    </div>  
-</div>  
-</div> 
-    
-  
+<div id="myConfirmation" class="confirmation" [class.d-none]="confirm">
+    <div class="confirmation-content">
+        <span (click)="openConfirm()" class="close">&times;</span>
+        <p>Bạn chắc chắn muốn gửi yêu cầu tạo lớp tới gia sư này?</p>
+        <div class="confirm-container">
+            <button id="btn-yes" (click)="clickYes()" class="confirm-btn">Có</button>
+            <button (click)="openConfirm()" class="confirm-btn">Không</button>
+        </div>
+    </div>
+</div>

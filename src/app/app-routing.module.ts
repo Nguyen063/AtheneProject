@@ -7,14 +7,12 @@ import { FortutorComponent } from './fortutor/fortutor.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { IntropageComponent } from './intropage/intropage.component';
 import { ShowProfileComponent } from './show-profile/show-profile.component';
-
 import { ContentAtheneComponent } from './content-athene/content-athene.component';
 import { FormFindLearnerComponent } from './form-find-learner/form-find-learner.component';
 import { FormLearnerComponent } from './form-learner/form-learner.component';
 import { FormFindTutorComponent } from './form-find-tutor/form-find-tutor.component';
 import { TutorProfileComponent } from './tutor-profile/tutor-profile.component';
 import { FormTutorComponent } from './form-tutor/form-tutor.component';
-
 
 
 
@@ -33,7 +31,6 @@ const routes: Routes = [
   { path: 'form-find-tutor', component: FormFindTutorComponent },
   { path: 'form-learner', component: FormLearnerComponent },
   { path: 'form-tutor', component: FormTutorComponent }
- 
 ];
 
 @NgModule({
