@@ -105,7 +105,7 @@
         </div>
         <div class="profile__item--below pb-3">
             <button class="profile__button text-white" (click)="openConfirm()">Đăng ký </button>
-            <button class="profile__button text-white" routerLink="/tutorprofile" routerLinkActive="active">Xem Profile </button>
+            <button class="profile__button text-white" class="{{isSelect(l) ? 'selected' : ''}}" (click)="onSelect(l)">Xem Profile </button>
         </div>
     </div>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ForlearnerService } from '../services/forlearner.service';
 
 @Component({
@@ -8,12 +9,13 @@ import { ForlearnerService } from '../services/forlearner.service';
 })
 export class ForlearnerComponent implements OnInit {
 
+  selectedId: any;
   learners:any;
   errMessage: string="" ;
   confirm:boolean=true;
   close:boolean=true;
 
-  constructor(private _service: ForlearnerService) { }
+  constructor(private _service: ForlearnerService, private _router: Router) { }
 
   ngOnInit(): void {
     // this.getLearnerInfor()
@@ -33,6 +35,13 @@ export class ForlearnerComponent implements OnInit {
     alert("Bạn đã gửi yêu cầu thành công");
     this.confirm=!this.confirm
  
+  }
+
+  onSelect(data:any):void{
+    this._router.navigate(['/forlearner', data.id])
+  }
+  isSelect(data:any){
+    return data.id===this.selectedId;
   }
 }
 
