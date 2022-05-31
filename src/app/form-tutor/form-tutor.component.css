@@ -6,10 +6,17 @@
     font-size: 1.3rem;
 }
 
+.form-container {
+    width: 50%;
+    margin: 0 auto;
+    min-width: 350px;
+}
+
 label {
     font-weight: bold;
     margin: 0rem 0.5rem;
     font-size: 1.2rem;
+    line-height: 3rem;
 }
 
 h4 {
