@@ -1,114 +1,51 @@
-body {
-    font-family: 'Roboto';
+.ipbox {
+    border: solid black 1.7px;
+    margin-top: 10px;
+    height: 2.5rem;
+    background-color: #D9F1F1;
+    width: 100%;
 }
 
 .form-container {
     width: 50%;
     margin: 0 auto;
     min-width: 350px;
-    margin-top: 80px;
 }
 
-input {
-    padding: 0;
+h4 {
+    font-weight: 800;
 }
 
-.form-line {
-    margin: 0.5rem 0;
-}
-
-.ipbox {
-    border: solid black 1.7px;
-    margin-top: 10px;
-    height: 2rem;
-    background-color: #D9F1F1;
-    width: 100%;
-}
-
-select.ipbox {
-    height: 1.85rem;
-}
-
-
-.flex-item {
-    display: flex;
-    justify-content: space-between;
-}
-
-#edit-item {
-    display: flex;
-}
-
-#phoneError,
-#phoneError1,
-#passError,
-#passError1,
-#cccdError,
-#cccdError1 {
-    color: red;
-    font-size: 12px;
-    font-style: italic;
-    display: none;
-}
-
-.lb-title {
-    line-height: 1.5rem;
-    text-align: center;
-    margin-top: 10px;
+p {
+    font-size: 1rem
 }
 
 label {
-    font-weight: bolder;
-    text-align: left;
-    white-space: nowrap;
-    margin-right: 5px;
-}
-
-h2 {
-    margin-bottom: 10px;
-}
-
-a,
-.submit {
     font-weight: bold;
-    color: black;
-    text-decoration: none;
-    font-size: 1rem;
+    margin: 0.5rem 0.5rem 0 0;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
 }
 
-button,
-.submit {
+.button_container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    font-size: 1.2rem;
     border: none;
-    margin: 10px 0;
-    background: none;
+    background-color: rgb(255, 255, 255, 0);
+    font-weight: 650;
 }
 
-.txt-info {
-    min-height: 100px;
-    font-family: Roboto;
+button:hover {
+    color: red;
 }
 
-#luong::placeholder {
-    text-align: right;
-}
-
- ::placeholder {
+::placeholder{
+    font-size: 15px;
     color: black;
     padding-left: 10px;
-}
-
-@media screen and (max-width:600px) {
-    .flex-item,
-    .txtbox {
-        display: block;
-    }
-    .flex-button {
-        display: flex;
-    }
-    .form-container {
-        width: 40%;
-        margin: 0 auto;
-        min-width: 350px;
-        margin-top: 80px;
-    }
 }
