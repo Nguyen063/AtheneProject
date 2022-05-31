@@ -10,10 +10,9 @@ const baseUrl="http://localhost:3000"
   providedIn: 'root'
 })
 export class ProfileService {
-  profile: Profile= new Profile();
-  profiles: any;
 
-  constructor(private _http: HttpClient, private _service: ProfileService) { }
+
+  constructor(private _http: HttpClient) { }
   ngOnInit(): void {
    
     // this.getProfiles()
@@ -24,12 +23,7 @@ export class ProfileService {
       catchError(this.handleError)
     )
   }
-  getTutor():Observable<Tutor[]>{
-    return this._http.get<Tutor[]>(`${baseUrl}/Tutor`).pipe(
-      retry(3),
-      catchError(this.handleError)
-    )
-  }
+ 
   handleError(error:HttpErrorResponse){
     return throwError(()=>{new Error(error.message)})
   }

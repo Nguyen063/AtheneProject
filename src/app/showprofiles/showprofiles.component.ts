@@ -1,13 +1,15 @@
-import { ProfileService } from './../services/profile.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Profile } from '../models/profile';
+import { ProfileService } from '../services/profile.service';
 
 @Component({
-  selector: 'app-show-profile',
-  templateUrl: './show-profile.component.html',
-  styleUrls: ['./show-profile.component.css']
+  selector: 'app-showprofiles',
+  templateUrl: './showprofiles.component.html',
+  styleUrls: ['./showprofiles.component.css']
 })
-export class ShowProfileComponent implements OnInit {
+export class ShowprofilesComponent implements OnInit {
+  
   profile: Profile= new Profile();
   profiles:any;
   errMessage: string="" ;
