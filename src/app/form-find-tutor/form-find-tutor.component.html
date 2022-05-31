@@ -10,9 +10,11 @@
             <div class="col-3">
                 <label>Nghề nghiệp:</label>
             </div>
-            <div class="col-4" *ngFor="let profession of Profession; let i=index">
-                <div>
-                    <input type="checkbox" [value]="profession.value" (change)="onCheckboxChange($event)"> <label>&nbsp; {{profession.name}}</label>
+            <div class="col-9" style="display: flex;">
+                <div *ngFor="let profession of Profession; let i=index">
+                    <div>
+                        <input type="checkbox" [value]="profession.value" (change)="onCheckboxChange($event)"> <label>&nbsp; {{profession.name}}</label>
+                    </div>
                 </div>
             </div>
             <small class="error text-danger" *ngIf="this.form.controls['checkArray'].errors?.['required']">*Vui lòng chọn giới tính</small>
@@ -47,12 +49,14 @@
             <div class="col-3">
                 <label>Giới tính:</label>
             </div>
-            <div class="col-4" *ngFor="let g of Gender; let i=index">
-                <div>
-                    <input type="checkbox" [value]="g.value" (change)="onCheckboxChange1($event)"><label>&nbsp;{{g.name}}</label>
+            <div class="col-9" style="display: flex">
+                <div class="gioitinh" *ngFor="let g of Gender; let i=index">
+                    <div>
+                        <input type="checkbox" [value]="g.value" (change)="onCheckboxChange1($event)"><label>&nbsp; {{g.name}}</label>
+                    </div>
                 </div>
             </div>
-            <small class="error text-danger" *ngIf="this.form.controls['checkArray1'].errors?.['required']">*Vui lòng chọn giới tính</small>
+            <small class="error text-danger" *ngIf="this.form.controls['checkArray1'].errors?.['required']">*Vui lòng chọn giới tính.</small>
         </div>
 
     <!-- row 4 -->

@@ -44,8 +44,22 @@ button:hover {
     color: red;
 }
 
+.gender{
+    width: 40%;
+}
+
 ::placeholder{
     font-size: 15px;
     color: black;
     padding-left: 10px;
+}
+@media screen and (max-width:800px) {
+    .col-3, .col-4,.col-8,.col-9{
+        width: 100%;
+    }
+
+    label{
+        line-height: 2rem;
+        margin: 0;
+    }
 }

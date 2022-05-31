@@ -50,7 +50,7 @@ import { ShowprofilesComponent } from './showprofiles/showprofiles.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule, 
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
@@ -59,8 +59,8 @@ import { ShowprofilesComponent } from './showprofiles/showprofiles.component';
       progressAnimation:"increasing",
       preventDuplicates: true
 
-    })
-    
+    }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
