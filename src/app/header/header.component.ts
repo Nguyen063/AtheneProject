@@ -36,7 +36,6 @@ closeLogin(){
   this.openlogin=!this.openlogin
 }
 openSignup(){
-
   this.opensignup=!this.opensignup
 }
 closeSignup(){
@@ -45,6 +44,5 @@ closeSignup(){
 openHeader(){
   this.closeHeader=!this.closeHeader
 }
-
 
 }
