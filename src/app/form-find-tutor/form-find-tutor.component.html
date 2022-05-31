@@ -21,28 +21,28 @@
         <!-- row 2 -->
         <div>
             <div class="row">
-            <!-- Lớp dạy -->
-            <div class="col-3">
-                <label for="grade">Lớp dạy:</label>
-            </div>
-            <div class="col-9">
-                <input class="ipbox" formControlName="grade" type="text" name="grade" id="grade" [class.is-invalid]="form.controls['grade'].invalid && form.controls['grade'].touched">
-            </div>
-            <div *ngIf="form.controls['grade'].invalid && form.controls['grade'].touched">
-                <small class="text-danger" *ngIf="form.controls['grade'].errors?.['required']">*Lớp học không được để trống</small>
-            </div>
-            <!-- Môn dạy -->
-            <div class="col-3">
-                <label class="lb-title" for="subject">Môn dạy:</label>
-            </div>
-            <div class="col-9">
-                <input class="ipbox " formControlName="subject" type="text" name="subject" id="subject" [class.is-invalid]="form.controls['subject'].invalid && form.controls['subject'].touched">
-            </div>
-            <div *ngIf="form.controls['subject'].invalid && form.controls['subject'].touched">
-                <small class="text-danger" *ngIf="form.controls['subject'].errors?.['required']">*Môn học không được để trống</small>
+                <!-- Lớp dạy -->
+                <div class="col-3">
+                    <label for="grade">Lớp dạy:</label>
+                </div>
+                <div class="col-9">
+                    <input class="ipbox" formControlName="grade" type="text" name="grade" id="grade" [class.is-invalid]="form.controls['grade'].invalid && form.controls['grade'].touched">
+                </div>
+                <div *ngIf="form.controls['grade'].invalid && form.controls['grade'].touched">
+                    <small class="text-danger" *ngIf="form.controls['grade'].errors?.['required']">*Lớp học không được để trống</small>
+                </div>
+                <!-- Môn dạy -->
+                <div class="col-3">
+                    <label class="lb-title" for="subject">Môn dạy:</label>
+                </div>
+                <div class="col-9">
+                    <input class="ipbox " formControlName="subject" type="text" name="subject" id="subject" [class.is-invalid]="form.controls['subject'].invalid && form.controls['subject'].touched">
+                </div>
+                <div *ngIf="form.controls['subject'].invalid && form.controls['subject'].touched">
+                    <small class="text-danger" *ngIf="form.controls['subject'].errors?.['required']">*Môn học không được để trống</small>
+                </div>
             </div>
         </div>
-    </div>
         <!-- row 3 -->
         <div class="row gender row">
             <div class="col-3">
@@ -56,62 +56,62 @@
             <small class="error text-danger" *ngIf="this.form.controls['checkArray1'].errors?.['required']">*Vui lòng chọn giới tính</small>
         </div>
 
-    <!-- row 4 -->
-            <div class="col-12">
-                <label class="lb-title" for="khuvuc">Địa điểm dạy:</label>
+        <!-- row 4 -->
+        <div class="col-12">
+            <label class="lb-title" for="khuvuc">Địa điểm dạy:</label>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <input class="ipbox" formControlName="sonha" type="text" name="sonha" id="sonha" placeholder="Số nhà" [class.is-invalid]="form.controls['sonha'].invalid && form.controls['sonha'].touched">
             </div>
-            <div class="row">
-                <div class="col-5">
-                    <input class="ipbox" formControlName="sonha" type="text" name="sonha" id="sonha" placeholder="Số nhà" [class.is-invalid]="form.controls['sonha'].invalid && form.controls['sonha'].touched">
-                </div>
-                <!-- Đường -->
-                <div class="col-7">
-                    <input class="ipbox" formControlName="duong" type="text" id="duong" name="duong" placeholder="Đường" [class.is-invalid]="form.controls['duong'].invalid && form.controls['duong'].touched">
-                </div>
+            <!-- Đường -->
+            <div class="col-7">
+                <input class="ipbox" formControlName="duong" type="text" id="duong" name="duong" placeholder="Đường" [class.is-invalid]="form.controls['duong'].invalid && form.controls['duong'].touched">
             </div>
-                <div *ngIf="form.controls['sonha'].invalid && form.controls['sonha'].touched">
-                <small class="text-danger" *ngIf="form.controls['sonha'].errors?.['required']">*Số nhà không được để trống</small>
-                </div>
-                <div *ngIf="form.controls['duong'].invalid && form.controls['duong'].touched">
-                    <small class="text-danger" *ngIf="form.controls['duong'].errors?.['required']">*Tên đường không được để trống</small>
-                </div>
-    <!-- row 5: Phường, Quận/ Huyện, TP -->
-    <div class="row">
-        <!-- Phường -->
-        <div class="col-4">
-            <input class="ipbox" formControlName="phuong" type="text" id="phuong" name="phuong" placeholder="Phường" [class.is-invalid]="form.controls['phuong'].invalid && form.controls['phuong'].touched">
         </div>
-        <!-- Quận/Huyện -->
-        <div class="col-4">
-            <input class="ipbox" formControlName="quan" type="text" id="quan" name="quan" placeholder="Quận/Huyện" [class.is-invalid]="form.controls['quan'].invalid && form.controls['quan'].touched">
+        <div *ngIf="form.controls['sonha'].invalid && form.controls['sonha'].touched">
+            <small class="text-danger" *ngIf="form.controls['sonha'].errors?.['required']">*Số nhà không được để trống</small>
         </div>
-        <!-- TP.HCM -->
-        <div class="col-4">
-            <input class="ipbox" type="text" id="thanhpho" name="address" placeholder="TP. Hồ Chí Minh" readonly>
+        <div *ngIf="form.controls['duong'].invalid && form.controls['duong'].touched">
+            <small class="text-danger" *ngIf="form.controls['duong'].errors?.['required']">*Tên đường không được để trống</small>
         </div>
-    </div>
-    <div>
-        <div *ngIf="form.controls['phuong'].invalid && form.controls['phuong'].touched">
-            <small class="text-danger" *ngIf="form.controls['phuong'].errors?.['required']">*Tên phường không được để trống</small>
+        <!-- row 5: Phường, Quận/ Huyện, TP -->
+        <div class="row">
+            <!-- Phường -->
+            <div class="col-4">
+                <input class="ipbox" formControlName="phuong" type="text" id="phuong" name="phuong" placeholder="Phường" [class.is-invalid]="form.controls['phuong'].invalid && form.controls['phuong'].touched">
+            </div>
+            <!-- Quận/Huyện -->
+            <div class="col-4">
+                <input class="ipbox" formControlName="quan" type="text" id="quan" name="quan" placeholder="Quận/Huyện" [class.is-invalid]="form.controls['quan'].invalid && form.controls['quan'].touched">
+            </div>
+            <!-- TP.HCM -->
+            <div class="col-4">
+                <input class="ipbox" type="text" id="thanhpho" name="address" placeholder="TP. Hồ Chí Minh" readonly>
+            </div>
         </div>
-        <div *ngIf="form.controls['quan'].invalid && form.controls['quan'].touched">
-            <small class="text-danger" *ngIf="form.controls['quan'].errors?.['required']">*Tên quận không được để trống</small>
+        <div>
+            <div *ngIf="form.controls['phuong'].invalid && form.controls['phuong'].touched">
+                <small class="text-danger" *ngIf="form.controls['phuong'].errors?.['required']">*Tên phường không được để trống</small>
+            </div>
+            <div *ngIf="form.controls['quan'].invalid && form.controls['quan'].touched">
+                <small class="text-danger" *ngIf="form.controls['quan'].errors?.['required']">*Tên quận không được để trống</small>
+            </div>
         </div>
-    </div>
-    <!-- row 6 -->
-    <div class="row">
-        <div class="col-3">
-            <label class="lb-title" for="kinhnghiem">Kinh nghiệm:</label>
+        <!-- row 6 -->
+        <div class="row">
+            <div class="col-3">
+                <label class="lb-title" for="kinhnghiem">Kinh nghiệm:</label>
+            </div>
+            <div class="col-9">
+                <input class="ipbox" type="text" id="kinhnghiem" name="kinhnghiem">
+            </div>
         </div>
-        <div class="col-9">
-            <input class="ipbox" type="text" id="kinhnghiem" name="kinhnghiem">
-        </div>
-    </div>
-    <!-- row 7 -->
+        <!-- row 7 -->
         <div class="row">
             <div class="col-3">
                 <label class="lb-title" for="time">Thời gian dạy:</label>
-            </div>            
+            </div>
             <div class="col-9">
                 <input class="ipbox " formControlName="time" type="text" name="time" id="time" placeholder="VD: 1h30 phút/1 buổi học" [class.is-invalid]="form.controls['time'].invalid && form.controls['time'].touched">
                 <div *ngIf="form.controls['time'].invalid && form.controls['time'].touched">
@@ -155,5 +155,3 @@
         </div>
     </form>
 </div>
-
-
