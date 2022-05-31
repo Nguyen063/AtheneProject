@@ -2,35 +2,64 @@ body {
     font-family: 'Roboto';
 }
 
-.form-container {
-    
-    width: 40%;
-    margin: 0 auto;
-    min-width: 350px;
-    margin-top: 60px;
-}
-
-input {
-    padding: 0;
-}
-
-.form-line {
-    margin: 0.5rem 0;
-}
-
 .ipbox {
     border: solid black 1.7px;
     margin-top: 10px;
-    height: 2rem;
+    height: 2.5rem;
     background-color: #D9F1F1;
     width: 100%;
+}
+.form-container {
+    width: 50%;
+    margin: 0 auto;
+    min-width: 350px;
+}
+
+h4 {
+    font-weight: 800;
+}
+
+p {
+    font-size: 1rem
+}
+
+label {
+    font-weight: bold;
+    margin: 0.5rem 0.5rem 0 0;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+.button_container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+button {
+    font-size: 1.2rem;
+    border: none;
+    background-color: rgb(255, 255, 255, 0);
+    font-weight: 650;
+}
+button:hover {
+    color: red;
+}
+
+::placeholder{
+    font-size: 15px;
+    color: black;
+    padding-left: 10px;
+}
+
+.txt-info {
+    min-height: 100px;
+    font-family: Roboto;
 }
 
 select.ipbox {
     height: 1.85rem;
 }
 
-#pass,
+/* #pass,
 #repass,
 #ho,
 #ten {
@@ -85,12 +114,7 @@ select.ipbox {
     margin-top: 10px;
 }
 
-label {
-    font-weight: bolder;
-    text-align: left;
-    white-space: nowrap;
-    margin-right: 5px;
-}
+
 
 h2 {
     margin-bottom: 10px;
@@ -148,4 +172,4 @@ button,
     .flex-button {
         display: flex;
     }
-}
+} */
