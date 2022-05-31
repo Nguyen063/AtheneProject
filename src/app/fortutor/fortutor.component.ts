@@ -1,48 +1,49 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { FortutorService } from '../services/fortutor.service';
-
-@Component({
-  selector: 'app-fortutor',
-  templateUrl: './fortutor.component.html',
-  styleUrls: ['./fortutor.component.css']
-})
-export class FortutorComponent implements OnInit {
-
-tutors:any;
-errMessage: string="" ;
-selectedId:any;
-  file:any=null;
-  confirm:boolean=true;
-  close:boolean=true;
-
-constructor(private _service: FortutorService, private _router:Router) { }
-
-ngOnInit(): void {
-  this.getTutors();
-
-} 
-getTutors(){
-  this._service.getTutors().subscribe({
-    next:data => this.tutors=data,
-    error : err=> this.errMessage=err
-  })
- }
- openConfirm(){
-   this.confirm=!this.confirm
- }
- clickYes(){
-   alert("Bạn đã đăng ký thành công");
-   this.confirm=!this.confirm
-
- }
-}
-
-
-
-  
-
-
-
+import { FormBuilder, Validators } from '@angular/forms';
  
-  
+@Component({
+  selector: 'app-form-tutor',
+  templateUrl: './form-tutor.component.html',
+  styleUrls: ['./form-tutor.component.css']
+})
+export class FormTutorComponent implements OnInit {
+  public form:any;
+  constructor(private _formBuilder:FormBuilder) { }
+ 
+  ngOnInit(): void {
+    this.form=this._formBuilder.group({
+      ho:['', Validators.required],
+      ten:['', Validators.required],
+      thanhpho:['', Validators.required],
+      sonha:['', Validators.required],
+      duong:['', Validators.required],
+      phuong:['', Validators.required],
+      quan:['', Validators.required],
+      dob:['', Validators.required],
+      major:['', Validators.required],
+      //salary:['',  [Validators.required, Validators.pattern("^[0-9]*$")]],
+      phone:['',[Validators.required, Validators.maxLength(10), Validators.minLength(10), Validators.pattern(/((09|03|07|08|05)+[0-9]{8}\b)/g)]],
+      ngaycap:['', Validators.required],
+      cccd:['',[Validators.required, Validators.maxLength(12), Validators.minLength(12), Validators.pattern(/((0)+[0-9]{11}\b)/g)]]
+  })
+ 
+}
+// Get input phone
+get phone(){
+  return this.form.controls['phone']}
+ 
+  // Get input cccd
+ get cccd(){
+  return this.form.controls['cccd']}
+ 
+  //Submit form
+  onSubmit() {
+ 
+    // stop here if form is invalid
+    if (this.form.invalid) {
+        return console.log(this.form.value)
+    }
+    alert('SUCCESS!! ^_^')
+   
+  }
+}
